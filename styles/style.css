@@ -22,13 +22,14 @@ html {
 }
 
 body {
+    min-width: 320px; 
     display: flex;
     flex-direction: column;
     height: 100%;
     margin: 0;
     font-family: "Montserrat", sans-serif;
     color: var(--color-dark-green);
-    font-size: clamp(20px, 1.354vw, 26px);
+    font-size: clamp(16px, 1.042vw, 20px);
     font-weight: 400;
     background-color: var(--color-white);
     -webkit-text-size-adjust: 100%;
@@ -82,12 +83,46 @@ h1,
 
 h2,
 .h2 {
-    font-size: clamp(26px, 2.083vw, 40px);
+    font-size: clamp(24px, 1.667vw, 32px);
+    margin-bottom: clamp(30px, 4.167vw, 80px);
+}
+
+/* Заголовок с паззлом */
+.title-decorative {
+    position: relative;
+    z-index: 2;
+}
+
+.title-decorative::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -30px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: clamp(71px, 7.344vw, 141px);
+    height: clamp(71px, 7.344vw, 141px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Секция с заголовком-паззлом */
+.section-common {
+    padding-top: clamp(70px, 5.208vw, 100px);
+    padding-bottom: clamp(30px, 3.906vw, 75px);
+}
+
+/* Секции Toys, Description, Price*/
+.section-special {
+    padding-top: clamp(50px, 3.906vw, 75px);
+    padding-bottom: clamp(50px, 3.906vw, 75px);
 }
 
 h3,
 .h3 {
-    font-size: clamp(22px, 1.667vw, 32px);
+    font-size: clamp(20px, 1.25vw, 24px);
 }
 
 .text-start {
@@ -362,25 +397,39 @@ iframe {
     background-color: var(--color-dark-green);
 }
 
-.header {}
 
-.hero {}
+/* Header */
 
-.about {}
 
-.toys {}
+/* Section Hero */
 
-.services {}
 
-.reviews {}
+/* Section About */
 
-.game {}
 
-.form {}
+/* Section Toys */
 
-.contacts {}
 
-.footer {}
+/* Section Services */
+
+
+
+/* Section Reviews */
+
+
+/* Section Game */
+
+
+/* Section Form */
+
+
+/* Section Contacts */
+
+
+
+/* Footer */
+
+
 
 @media (max-width: 1024px) {}
 
