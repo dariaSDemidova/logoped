@@ -424,7 +424,7 @@ iframe {
 
 
 /* Section Contacts */
-.contacts__title {
+.contacts__title::before {
     background-image: url(../assets/images/puzzle-violet-2.png);
 }
 
@@ -432,6 +432,30 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.contacts__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts__label {
+    font-size: clamp(20px, 1.25vw, 24px);
+}
+
+.contacts__link {
+    font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.contacts__map {
+    width: calc((100% - 49px) / 2);
+    height: clamp(260px, 77.2vw, 772px);
+}
+
+.contacts__map iframe {
+    width: 100%;
+    height: 100%;
 }
 
 /* Footer */
@@ -451,7 +475,7 @@ iframe {
   min-width: 60px;
 }
 
-.nav-list {
+.footer__nav-list {
   display: flex;
   gap: 24px;
 }
@@ -483,6 +507,19 @@ iframe {
 @media (max-width: 1024px) {}
 
 @media (max-width: 768px) {
+    /* Section Contacts */
+
+.contacts__title {
+    align-items: center;
+}
+.contacts__title::before {
+    background-image: url(../assets/images/puzzle-dark-pink.png);
+}
+
+.contacts__content {
+flex-direction: column;
+}
+
     /* Footer */
   .footer__nav {
     display: none;
