@@ -15,19 +15,36 @@
 <body>
     <header class="header"></header>
     <main>
-        <section class="hero">
+        <section id="hero" class="hero">
         </section>
-        <section class="about section-common">
+        <section id="about" class="about section-common">
             
         </section>
         <section class="toys section-special">
         </section>
-        <section class="services">
+        <section id="services" class="services">
         </section>
-        <section class="reviews section-common"></section>
-        <section class="game section-common"></section>
+        <section id="reviews" class="reviews section-common"></section>
+        <section id="game" class="game section-common"></section>
         <section class="form section-common"></section>
-        <section class="contacts section-common"></section>
+        <section id="contacts" class="contacts section-common">
+            <div class="contacts__container container">
+                <h2 class="contacts__title title-decorative">Контакты</h2>
+                <div class="contacts__content">
+                    <div class="contacts__text">
+                        <p>наш Адрес:</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Санкт-Петербург, ул. Орбели, 19" target="_blank">Санкт-Петербург, ул. Орбели, 19</a>
+                        <p>телефон:</p>
+                        <a href="tel:8 (911) 198-85-24">8 (911) 198-85-24</a>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe 
+          src="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16" 
+          width="968" height="772" style="border:0;" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer bg-green">
       <div class="footer__container container">
@@ -35,16 +52,30 @@
           <a href="#"><img src="./assets/logo/logo.svg" alt="Logo" /></a>
         </div>
         <nav class="footer__nav">
-          <ul class="footer__list text-black text-uppercase text-decoration-none list-unstyled">
-            <li class="footer__item">ОБо мне</li>
-            <li class="footer__item">Услуги и Прайс</li>
-            <li class="footer__item">Отзывы</li>
-            <li class="footer__item">Развивающая игра</li>
-            <li class="footer__item">Контакты</li>
+          <ul class="nav-list text-black text-uppercase list-unstyled">
+            <li class="nav-list__item"><a class="text-decoration-none" href="#about">Обо мне</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#services">Услуги и Прайс</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#reviews">Отзывы</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#game">Развивающая игра</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
+        <div class="footer__icons--mobile">
+          <a href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer"
+            ><img src="./assets/icons/whatsapp.svg" alt="WhatsApp"
+          /></a>
+          <a href="mailto:mitornadya@yandex.ru" target="_blank" rel="noopener noreferrer"
+            ><img src="./assets/icons/email.svg" alt="Email"
+          /></a>
+          <a href="tel:+7 (911) 198-85-24">
+            <img
+              src="./assets/icons/phone.svg"
+              alt="Позвонить по номеру +7 (911) 198-85-24"
+            />
+          </a>
+        </div>
         <div class="footer__arrow">
-          <a href="#"><img src="./assets/icons/ScrollUp.svg" alt="ScrollUp" /></a>
+          <a href="#hero"><img src="./assets/icons/ScrollUp.svg" alt="ScrollUp" /></a>
         </div>
     </footer>
 
@@ -53,23 +84,5 @@
 </body>
 
 </html>
-
-<!--<div class="footer__wrapper">
-        <div class="footer__logo">
-          <a href="#"><img src="./assets/logo/logo.svg" alt="Logo" /></a>
-        </div>
-        <nav class="footer__nav">
-          <ul class="footer__list text-black">
-            <li class="footer__item">ОБо мне</li>
-            <li class="footer__item">Услуги и Прайс</li>
-            <li class="footer__item">Отзывы</li>
-            <li class="footer__item">Развивающая игра</li>
-            <li class="footer__item">Контакты</li>
-          </ul>
-        </nav>
-        <div class="footer__arrow">
-          <a href="#"><img src="./assets/icons/ScrollUp.svg" alt="" /></a>
-        </div>
-      </div>-->
 
 
