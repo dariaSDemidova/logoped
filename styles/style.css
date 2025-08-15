@@ -424,39 +424,6 @@ iframe {
 
 
 /* Section Contacts */
-.contacts__title::before {
-    background-image: url(../assets/images/puzzle-violet-2.png);
-}
-
-.contacts__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contacts__text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.contacts__label {
-    font-size: clamp(20px, 1.25vw, 24px);
-}
-
-.contacts__link {
-    font-size: clamp(16px, 1.6vw, 20px);
-}
-
-.contacts__map {
-    width: calc((100% - 49px) / 2);
-    height: clamp(260px, 77.2vw, 772px);
-}
-
-.contacts__map iframe {
-    width: 100%;
-    height: 100%;
-}
 
 /* Footer */
 .footer {
@@ -507,59 +474,46 @@ iframe {
 @media (max-width: 1024px) {}
 
 @media (max-width: 768px) {
-    /* Section Contacts */
-
-.contacts__title {
-    align-items: center;
-}
-.contacts__title::before {
-    background-image: url(../assets/images/puzzle-dark-pink.png);
+/* Footer */
+.footer__nav {
+  display: none;
 }
 
-.contacts__content {
-flex-direction: column;
+.footer__icons--mobile {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
-    /* Footer */
-  .footer__nav {
-    display: none;
-  }
-
-  .footer__icons--mobile {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .footer__icons--mobile img {
-    width: 60px;
-    height: auto;
-  }
+.footer__icons--mobile img {
+  width: 60px;
+  height: auto;
+}
 }
 
 @media (max-width: 575px) {
-    /* Footer */
-  .footer {
-    padding: 10px 0;
-  }
+/* Footer */
+.footer {
+  padding: 10px 0;
+}
 
-  .footer__container {
-    padding: 0 10px;
-  }
-  .footer__logo img {
-    min-width: 40px;
-  }
+.footer__container {
+  padding: 0 10px;
+}
+.footer__logo img {
+  min-width: 40px;
+}
 
-  .footer__icons--mobile {
-    gap: 10px;
-  }
+.footer__icons--mobile {
+  gap: 10px;
+}
 
-  .footer__icons--mobile img {
-    width: 40px;
-  }
+.footer__icons--mobile img {
+  width: 40px;
+}
 
-  .footer__arrow img {
-    min-width: 40px;
-  }
+.footer__arrow img {
+  min-width: 40px;
+}
 }
