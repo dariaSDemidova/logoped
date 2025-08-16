@@ -475,10 +475,62 @@ iframe {
 
 /* Footer */
 
+@media (max-width: 1440px) {
+    .about-text {
+        gap: 20px;
+    }
+}
 
+@media (max-width: 1024px) {
+    .about-content {
+        flex-wrap: wrap;
+    }
+    .about-images {
+        width: 100%;
+        flex-direction: row;
+    }
+}
 
-@media (max-width: 1024px) {}
+@media (max-width: 768px) {
+    /* Section About */
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-title {
+        align-self: center;
+    }
+    .about-paragraph {
+        text-align: center;
+    }
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+            "image1"
+            "text1"
+            "text2"
+            "image2"
+            "text3"
+            "image3";
 
-@media (max-width: 768px) {}
+    }
+    .about-texts,
+    .about-images {
+        display: contents;
+    }
+    .text-1 {grid-area: text1;}
+    .text-2 {grid-area: text2;}
+    .text-3 {grid-area: text3;}
+    .image-1 {grid-area: image1;}
+    .image-2 {grid-area: image2;}
+    .image-3 {grid-area: image3;}
+    .about-subtitle {
+        text-align: center;
+    }
+    /* Section Toys */
+}
+
 
 @media (max-width: 575px) {}
