@@ -460,18 +460,36 @@ iframe {
 .game {}
 
 /* Section Form */
-.form-section {
-    padding-top: 234px;
-}
+
 .form-wrapper {
     position: relative;
+    padding: 40px 60px;
     border-radius: 20px;
     border: 11px solid #DFF1ED;
 }
 
+.form-text {
+    width: 69%;
+}
+
+.form-title {
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: none;
+}
+
+.form-subtext {
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
 .form-image {
     position: absolute;
-    top: -20%;
+    top: -134px;
     right: 5%;
     max-width: 250px;
 }
@@ -481,6 +499,76 @@ iframe {
     height: auto;
 }
 
+.form-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 24px;
+    grid-template-areas: 
+    "nameinput message"
+    "ageinput message"
+    "phoneinput formbutton";
+    margin-bottom: 50px;
+}
+
+.name-input {grid-area: nameinput;}
+.message {grid-area: message;}
+.age-input {grid-area: ageinput;}
+.phone-input {grid-area: phoneinput;}
+.form-button {grid-area: formbutton;}
+
+
+.form-content input,
+.form-content textarea {
+    background-color: #E6F4F1;
+    border: none;
+    border-radius: 8px;
+}
+
+.form-content input,
+.form-content textarea {
+    padding: 32px 20px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F6C351;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.checkbox a {
+    color: #E5097F;
+    text-decoration: underline;
+}
+
+.form-button {
+    background-color: #A8E3C5;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
 /* .contacts {} */
 
 /* .footer {} */
