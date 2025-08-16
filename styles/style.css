@@ -397,9 +397,50 @@ iframe {
 
 
 /* Header */
+.header {
+    padding: 20px 0;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.header__logo img {
+    width: clamp(60px, 9vw, 100px);
+    height: auto;
+    min-width: 60px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 24px;
+}
+
+.header__icons {
+    display: flex;
+    gap: 5px;
+}
+
+.header__icons a {
+    width: 100%;
+}
+
+.header__icons img {
+    width: 80px;
+    height: auto;
+}
 
 /* Section Hero */
+.hero__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* Section About */
@@ -623,6 +664,10 @@ iframe {
     cursor: pointer;
 }
 
+.footer__arrow:hover {
+    transform: scale(1.1);
+}
+
 .footer__arrow img {
     width: clamp(60px, 9vw, 100px);
     height: auto;
@@ -694,6 +739,16 @@ iframe {
     .btn {
         font-size: 20px;
     }
+
+    /* Header */
+.header__nav-list {
+    display: none;
+}
+
+.header__icons {
+    align-items: center;
+}
+
     /* Section About */
     .about-wrapper {
         display: flex;
