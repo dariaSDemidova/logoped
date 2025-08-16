@@ -384,17 +384,15 @@ iframe {
     background-color: var(--color-green);
     color: var(--color-white);
     font-size: 22px;
-    font-weight: 600;
     line-height: 121.796%;
     letter-spacing: 2.64px;
-    text-transform: uppercase;
 }
 
 .btn:hover,
 .btn:focus {
     text-decoration: none;
     cursor: pointer;
-    background-color: var(--color-dark-green);
+    background-color: #8fd7b2;
 }
 
 /* .header {}
@@ -463,6 +461,7 @@ iframe {
 
 .form-wrapper {
     position: relative;
+    margin-top: 100px;
     padding: 40px 60px;
     border-radius: 20px;
     border: 11px solid #DFF1ED;
@@ -474,7 +473,7 @@ iframe {
 
 .form-title {
     width: 100%;
-    line-height: 50px;
+    line-height: 2.08;
     text-align: center;
     margin-bottom: 50px;
     text-transform: none;
@@ -483,13 +482,13 @@ iframe {
 .form-subtext {
     width: 100%;
     text-align: center;
-    line-height: 25px;
+    line-height: 1.25;
     margin-bottom: 50px;
 }
 
 .form-image {
     position: absolute;
-    top: -134px;
+    top: -13%;
     right: 5%;
     max-width: 250px;
 }
@@ -530,6 +529,11 @@ iframe {
     padding: 32px 20px;
 }
 
+.form-content input:focus,
+.form-content textarea:focus {
+    outline: 2px solid var(--color-green);
+}
+
 .checkbox {
     display: flex;
     align-items: center;
@@ -542,6 +546,7 @@ iframe {
     -moz-appearance: none;
     width: 26px;
     height: 26px;
+    flex-shrink: 0;
     border: none;
     border-radius: 5px;
     background-color: #F6C351;
@@ -562,9 +567,12 @@ iframe {
     color: #E5097F;
     text-decoration: underline;
 }
+.checkbox label {
+    font-size: 14px;
+}
 
 .form-button {
-    background-color: #A8E3C5;
+    background-color: var(--color-green);
     border: none;
     border-radius: 8px;
     color: #FFFFFF;
@@ -574,12 +582,14 @@ iframe {
 /* .footer {} */
 
 @media (max-width: 1440px) {
+    /* Section About */
     .about-text {
         gap: 20px;
     }
 }
 
 @media (max-width: 1024px) {
+    /* Section About */
     .about-content {
         flex-wrap: wrap;
     }
@@ -587,11 +597,55 @@ iframe {
         width: 100%;
         flex-direction: row;
     }
-
+    /* Section Form */
+    .form-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .form-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+        grid-template-areas: 
+        "nameinput"
+        "ageinput"
+        "phoneinput"
+        "message"
+        "formbutton";
+        margin-bottom: 50px;
+    }
+    .form-button {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .form-text {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .form-image {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .form-title {
+        margin-bottom: 20px;
+    }
+    .checkbox label {
+        display: block;
+        white-space: normal;
+    }
+    .checkbox label a {
+        display: inline;
+        white-space: normal;
+        word-break: break-word;
+    }
+    /* Section Contacts */
 
 }
 
 @media (max-width: 768px) {
+    .btn {
+        font-size: 20px;
+    }
     /* Section About */
     .about-wrapper {
         display: flex;
@@ -629,6 +683,39 @@ iframe {
     .about-subtitle {
         text-align: center;
     }
+    
     /* Section Toys */
+}
+
+@media (max-width: 575px) {
+    /* Section Form */
+    .form-title {
+        line-height: 1.5;
+    }
+    .form-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .form-content input,
+    .form-content textarea {
+        padding: 32px 10px;
+    }
+    .form-text {
+        margin-top: 20%;
+    }
+    .form-image {
+        top: -10%;
+    }
+    /* Section Contacts */
+}
+
+@media (max-width: 420px) {
+    /* Section Form */
+    .form-image {
+        top: -5%;
+    }
+    .form-text {
+        margin-top: 25%;
+    }
 }
 
