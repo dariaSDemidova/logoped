@@ -51,7 +51,7 @@ main {
 
 .container {
     margin: auto;
-    max-width: 1660px;
+    max-width: 1400px;
     padding: 0 30px;
 }
 
@@ -451,14 +451,6 @@ iframe {
     gap: 8px;
 }
 
-.toys {
-    background-color: #C0E4DC;
-}
-.toys-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 /* .toys {}
 
 .services {}
@@ -467,11 +459,31 @@ iframe {
 
 .game {}
 
-.form {}
+/* Section Form */
+.form-section {
+    padding-top: 234px;
+}
+.form-wrapper {
+    position: relative;
+    border-radius: 20px;
+    border: 11px solid #DFF1ED;
+}
 
-.contacts {}
+.form-image {
+    position: absolute;
+    top: -20%;
+    right: 5%;
+    max-width: 250px;
+}
 
-.footer {} */
+.form-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* .contacts {} */
+
+/* .footer {} */
 
 @media (max-width: 1440px) {
     .about-text {
