@@ -410,52 +410,46 @@ iframe {
 /* Section Toys */
 .section-special {
     background-color: #E6F3FF;
-    padding: clamp(40px, 6vw, 80px) 0;
 }
 
-.toys-wrapper {
+.toys-fixed-group {
     position: relative;
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    transform-origin: top left;
+    margin: 0 auto;
 }
 
-.toys-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.toys-images {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: clamp(20px, 3vw, 40px);
+.toys-images-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
 }
 
 .girl-with-dino {
-    max-width: 550px;
+    display: block;
+    max-width: 50%;
     height: auto;
-    margin-left: 0px;
-    z-index: 2;
-    position: relative;
+    position: absolute;
+    z-index: 1;
 }
 
 .dolls {
-    max-width: 600px;
-    height: auto;
-    margin-top: 230px;
-    right: 0p;
-    margin-left: -120px;
-    z-index: 1;
-    pointer-events: none;
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+    max-width: 60%;
+    z-index: 2;
 }
 
 .toys-text {
     position: absolute;
-    top: 30px;
-    right: -110px;
-    background-color: #F3EFFF;
+    top: 20px;
+    left: 35%;
+    transform: translateX(-2%);
+    background-color: rgba(243, 239, 255, 0.8);
     padding: clamp(24px, 4vw, 42px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 700px;
@@ -464,27 +458,6 @@ iframe {
     z-index: 3;
 }
 
-@media (max-width: 768px) {
-    .toys-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .toys-images {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .toys-text {
-        position: static;
-        margin-top: 20px;
-    }
-
-    .girl-with-dino,
-    .dolls {
-        max-width: 80%;
-    }
-}
 /* Section Services */
 
 
@@ -508,6 +481,53 @@ iframe {
 
 @media (max-width: 1024px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 980px) {
+    .toys-text {
+        padding: clamp(20px, 2vw, 32px);
+        font-size: clamp(14px, 1.2vw, 18px);
+    }
+}
 
-@media (max-width: 575px) {}
+@media (max-width: 768px) {
+    .toys-fixed-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .toys-text {
+            position: static;
+            width: 100%;
+            max-width: none;
+            margin-bottom: 20px;
+        }
+    
+        .toys-images-group {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+        }
+    
+        .girl-with-dino,
+        .dolls {
+            position: absolute;
+            width: 50%;
+        }
+    
+        .dolls {
+            bottom: -90px;
+            right: 10px;
+        }
+}
+
+@media (max-width: 575px) {
+    .toys-text {
+            font-size: clamp(10px, 1.2vw, 18px);
+        }
+
+    .dolls {
+        bottom: -70px;
+        right: 10px;
+    }
+}
