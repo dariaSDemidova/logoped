@@ -395,12 +395,14 @@ iframe {
     background-color: #8fd7b2;
 }
 
-/* .header {}
 
-.hero {} */
+/* Header */
+
+
+/* Section Hero */
+
 
 /* Section About */
-
 .about-title::before {
     background-image: url('../assets/images/puzzle-blue.png');
 }
@@ -449,13 +451,17 @@ iframe {
     gap: 8px;
 }
 
-/* .toys {}
 
-.services {}
+/* Section Toys */
 
-.reviews {}
 
-.game {}
+/* Section Services */
+
+
+
+
+/* Section Reviews */
+
 
 /* Section Form */
 
@@ -581,6 +587,7 @@ iframe {
 
 /* .footer {} */
 
+
 @media (max-width: 1440px) {
     /* Section About */
     .about-text {
@@ -597,6 +604,7 @@ iframe {
         width: 100%;
         flex-direction: row;
     }
+
     /* Section Form */
     .form-wrapper {
         padding-left: 30px;
@@ -639,7 +647,6 @@ iframe {
         word-break: break-word;
     }
     /* Section Contacts */
-
 }
 
 @media (max-width: 768px) {
@@ -687,6 +694,7 @@ iframe {
     /* Section Toys */
 }
 
+
 @media (max-width: 575px) {
     /* Section Form */
     .form-title {
@@ -718,4 +726,5 @@ iframe {
         margin-top: 25%;
     }
 }
+
 
