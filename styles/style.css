@@ -463,7 +463,6 @@ iframe {
 /* Section Reviews */
 .reviews {
     padding: 60px 20px;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -482,14 +481,15 @@ iframe {
 .reviews-cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    max-width: 100%;
+    gap: 0;
     flex-wrap: wrap;
 }
 
 .review-card {
     position: relative;
     width: 450px;
-    height: 450px;
+    height: 480px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -506,10 +506,9 @@ iframe {
 
 .review-image {
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: 80px;
     width: 250px;
-    height: 250px;
+    height: 280px;
     z-index: 2;
     object-fit: contain;
 }
