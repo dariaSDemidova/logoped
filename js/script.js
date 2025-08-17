@@ -17,4 +17,33 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
     }
   });
+
+  const track = document.querySelector('.carousel-track');
+  const cards = document.querySelectorAll('.carousel .review-card');
+  const leftBtn = document.querySelector('.carousel-arrow.left');
+  const rightBtn = document.querySelector('.carousel-arrow.right');
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  leftBtn?.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  rightBtn?.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
 });
