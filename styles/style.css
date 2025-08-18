@@ -463,6 +463,74 @@ iframe {
 /* Section Reviews */
 
 
+
+/* Section Game */
+
+.game-title::before {
+    background-image: url('../assets/images/puzzle-pink-2.png');
+}
+
+.reading-game-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: clamp(20px, 4vw, 60px);
+    flex-wrap: wrap;
+}
+
+.reading-game-content {
+    flex: 1 1 60%;
+    max-width: 60%;
+}
+
+.dino-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.game-photo1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.dino-animation {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(30%);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    width: clamp(100px, 20vw, 160px);
+    z-index: 1;
+}
+
+.dino-animation.visible {
+    transform: translateX(-50%) translateY(-10%);
+    opacity: 1;
+}
+
+/* Левая часть: визуал */
+.reading-game-visual {
+    flex: 1 1 40%;
+    max-width: 40%;
+    position: relative;
+}
+
+.dino-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
 /* Section Form */
 .modal {
     display: none;
