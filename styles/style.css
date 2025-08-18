@@ -490,6 +490,11 @@ iframe {
     margin: 0 auto;
 }
 
+.highlight-bold {
+    font-weight: 600;
+    font-style: normal;
+}
+
 .game-photo1 {
     width: 100%;
     height: auto;
