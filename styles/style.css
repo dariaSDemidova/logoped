@@ -624,6 +624,11 @@ iframe {
 }
 
 @media(max-width: 575px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
     .services-block__card {
         padding: 0 20px;
     }
@@ -634,6 +639,20 @@ iframe {
 
     .descr__img-text {
         right: -20%;
+    }
+
+    .price__item {
+        text-transform: initial;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .price__item p {
+        font-size: 14px;
+    }
+
+    .first-p {
+        width: 50% !important;
     }
 }
 
