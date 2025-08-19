@@ -468,8 +468,6 @@ iframe {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    flex-wrap: nowrap;
 }
 
 .header__logo img {
@@ -495,7 +493,6 @@ iframe {
 .header__icons {
     display: flex;
     gap: 5px;
-
     align-items: center;
 }
 
@@ -984,46 +981,46 @@ iframe {
 
 /* .contacts {} */
 
-/* Footer */
-.footer {
-    padding: 20px 0;
-}
+    /* Footer */
+    .footer {
+        padding: 20px 0;
+    }
 
-.footer__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .footer__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.footer__logo img {
-    width: clamp(60px, 9vw, 100px);
-    height: auto;
-    min-width: 60px;
-}
+    .footer__logo img {
+        width: clamp(60px, 9vw, 100px);
+        height: auto;
+        min-width: 60px;
+    }
 
-.footer__nav-list {
-    display: flex;
-    gap: 24px;
-}
+    .footer__nav-list {
+        display: flex;
+        gap: 24px;
+    }
 
-.footer__icons--mobile {
-    display: none;
-}
+    .footer__icons--mobile {
+        display: none;
+    }
 
-.footer__arrow {
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
+    .footer__arrow {
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
 
-.footer__arrow:hover {
-    transform: scale(1.1);
-}
+    .footer__arrow:hover {
+        transform: scale(1.1);
+    }
 
-.footer__arrow img {
-    width: clamp(60px, 9vw, 100px);
-    height: auto;
-    min-width: 60px;
-}
+    .footer__arrow img {
+        width: clamp(60px, 9vw, 100px);
+        height: auto;
+        min-width: 60px;
+    }
 
 @media (max-width: 1440px) {
 
@@ -1061,16 +1058,16 @@ iframe {
         color: var(--color-green-title);
     }
 
-.header__icons {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    flex: 0 0 auto;
-}
+    .header__icons {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        flex: 0 0 auto;
+    }
 
-.header__burger {
-    display: flex;
-}
+    .header__burger {
+        display: flex;
+    }
 
     /* Section About */
     .about-content {
