@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    min-width: 320px; 
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -356,6 +356,10 @@ iframe {
     background: rgba(235, 229, 243, 0.60);
 }
 
+.bg-pink {
+    background: rgba(255, 234, 233, 0.60);
+}
+
 .bg-none {
     background: none;
 }
@@ -534,7 +538,8 @@ iframe {
 }
 
 .about-paragraph {
-    font-size: clamp(20px, 1.25vw, 24px);;
+    font-size: clamp(20px, 1.25vw, 24px);
+    ;
 }
 
 .about-content {
@@ -582,9 +587,200 @@ iframe {
 
 
 /* Section Services */
+.services__title::before {
+    background-image: url('../assets/images/puzzle-violet.png');
+}
 
+.services-block__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
 
+.services-block__arrows {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
 
+.services-block__arrow {
+    width: 80px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.services-block__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.services-block__card {
+    max-width: 500px;
+    width: 100%;
+    height: 176px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descr .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.descr__img-wrapper {
+    position: relative;
+    width: clamp(210px, 21.354vw, 410px);
+    flex-shrink: 0;
+    aspect-ratio: 2/3;
+}
+
+.descr__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descr__img-text {
+    position: absolute;
+    top: -20%;
+    right: -70%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 19.375vw, 372px);
+    height: clamp(130px, 11.042vw, 212px);
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.descr__img-text:after {
+    content: "";
+    background: url(../assets/icons/triangle.svg) center / cover no-repeat;
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    width: 40px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.descr__card {
+    padding: 40px;
+    max-width: 852px;
+}
+
+.price__title {
+    display: block;
+}
+
+.price__item {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.price__item:nth-child(even) {
+    background-color: var(--color-light-green);
+}
+
+.price__item p {
+    width: calc(100% / 3);
+}
+
+@media(max-width: 1200px) {
+    .descr__img-text {
+        top: -40%;
+        right: -80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .services-block .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .services__title {
+        align-self: center;
+    }
+
+    .services-block__top,
+    .services-block__bottom {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .services-block__arrows {
+        display: none;
+    }
+
+    .services-block__card {
+        max-width: 100%;
+        height: 130px;
+    }
+
+    .descr .container {
+        flex-direction: column;
+    }
+
+    .descr__img-text {
+        padding: 20px;
+    }
+
+    .descr__img-text:after {
+        width: 30px;
+        height: 30px;
+    }
+
+    .descr__card {
+        padding: 40px 20px;
+    }
+
+    .price__item {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .services-block__card {
+        padding: 0 20px;
+    }
+
+    .descr__card {
+        padding: 20px 10px;
+    }
+
+    .descr__img-text {
+        right: -20%;
+    }
+
+    .price__item {
+        text-transform: initial;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .price__item p {
+        font-size: 14px;
+    }
+
+    .first-p {
+        width: 50% !important;
+    }
+}
 
 /* Section Reviews */
 
@@ -621,7 +817,7 @@ iframe {
     background: none;
     border: none;
     cursor: pointer;
-    }
+}
 
 .modal-content h2 {
     font-size: 20px;
@@ -696,18 +892,32 @@ iframe {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 24px;
-    grid-template-areas: 
-    "nameinput message"
-    "ageinput message"
-    "phoneinput formbutton";
+    grid-template-areas:
+        "nameinput message"
+        "ageinput message"
+        "phoneinput formbutton";
     margin-bottom: 50px;
 }
 
-.name-input {grid-area: nameinput;}
-.message {grid-area: message;}
-.age-input {grid-area: ageinput;}
-.phone-input {grid-area: phoneinput;}
-.form-button {grid-area: formbutton;}
+.name-input {
+    grid-area: nameinput;
+}
+
+.message {
+    grid-area: message;
+}
+
+.age-input {
+    grid-area: ageinput;
+}
+
+.phone-input {
+    grid-area: phoneinput;
+}
+
+.form-button {
+    grid-area: formbutton;
+}
 
 .form-content input,
 .form-content textarea {
@@ -755,10 +965,12 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .checkbox a {
     color: #E5097F;
     text-decoration: underline;
 }
+
 .checkbox label {
     font-size: 14px;
 }
@@ -769,6 +981,7 @@ iframe {
     border-radius: 8px;
     color: #FFFFFF;
 }
+
 /* .contacts {} */
 
 /* Footer */
@@ -813,6 +1026,7 @@ iframe {
 }
 
 @media (max-width: 1440px) {
+
     /* Section About */
     .about-text {
         gap: 20px;
@@ -862,6 +1076,7 @@ iframe {
     .about-content {
         flex-wrap: wrap;
     }
+
     .about-images {
         width: 100%;
         flex-direction: row;
@@ -872,37 +1087,44 @@ iframe {
         padding-left: 30px;
         padding-right: 30px;
     }
+
     .form-content {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 24px;
-        grid-template-areas: 
-        "nameinput"
-        "ageinput"
-        "phoneinput"
-        "message"
-        "formbutton";
+        grid-template-areas:
+            "nameinput"
+            "ageinput"
+            "phoneinput"
+            "message"
+            "formbutton";
         margin-bottom: 50px;
     }
+
     .form-button {
         padding-top: 24px;
         padding-bottom: 24px;
     }
+
     .form-text {
         width: 100%;
         margin-top: 100px;
     }
+
     .form-image {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .form-title {
         margin-bottom: 20px;
     }
+
     .checkbox label {
         display: block;
         white-space: normal;
     }
+
     .checkbox label a {
         display: inline;
         white-space: normal;
@@ -922,17 +1144,20 @@ iframe {
         display: flex;
         flex-direction: column;
     }
+
     .about-title {
         align-self: center;
     }
+
     .about-paragraph {
         text-align: center;
     }
+
     .about-content {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
-        grid-template-areas: 
+        grid-template-areas:
             "image1"
             "text1"
             "text2"
@@ -941,20 +1166,40 @@ iframe {
             "image3";
 
     }
+
     .about-texts,
     .about-images {
         display: contents;
     }
-    .text-1 {grid-area: text1;}
-    .text-2 {grid-area: text2;}
-    .text-3 {grid-area: text3;}
-    .image-1 {grid-area: image1;}
-    .image-2 {grid-area: image2;}
-    .image-3 {grid-area: image3;}
+
+    .text-1 {
+        grid-area: text1;
+    }
+
+    .text-2 {
+        grid-area: text2;
+    }
+
+    .text-3 {
+        grid-area: text3;
+    }
+
+    .image-1 {
+        grid-area: image1;
+    }
+
+    .image-2 {
+        grid-area: image2;
+    }
+
+    .image-3 {
+        grid-area: image3;
+    }
+
     .about-subtitle {
         text-align: center;
     }
-    
+
     /* Section Toys */
 
     /* Footer */
@@ -977,24 +1222,30 @@ iframe {
 
 
 @media (max-width: 575px) {
+
     /* Section Form */
     .form-title {
         line-height: 1.5;
     }
+
     .form-wrapper {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .form-content input,
     .form-content textarea {
         padding: 32px 10px;
     }
+
     .form-text {
         margin-top: 20%;
     }
+
     .form-image {
         top: -10%;
     }
+
     /* Section Contacts */
 
     /* Footer */
@@ -1024,10 +1275,12 @@ iframe {
 }
 
 @media (max-width: 420px) {
+
     /* Section Form */
     .form-image {
         top: -5%;
     }
+
     .form-text {
         margin-top: 25%;
     }
