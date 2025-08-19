@@ -5,15 +5,17 @@ const navLinks = document.querySelectorAll(".header__nav-list a");
 
 // Клик по бургеру
 burger.addEventListener("click", () => {
-  burger.classList.toggle("open");
+  const isOpen = burger.classList.toggle("open");
   navList.classList.toggle("open");
+  burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
-// Клик по любой ссылке меню
+// Авто-закрытие по клику на ссылку
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
     burger.classList.remove("open");
     navList.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
   });
 });
 
