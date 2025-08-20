@@ -659,6 +659,78 @@ iframe {
 /* Section Reviews */
 
 
+
+/* Section Game */
+
+.game-title::before {
+    background-image: url('../assets/images/puzzle-pink-2.png');
+}
+
+.reading-game-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: clamp(10px, 3vw, 40px);
+}
+
+.reading-game-content {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dino-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.game-photo1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.dino-animation {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    transform: translateX(0%) translateY(40%);
+    transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0.8s;
+    width: clamp(200px, 28vw, 280px);
+    z-index: 1;
+}
+
+.dino-animation.visible {
+    transform: translateX(0%) translateY(0%);
+    opacity: 1;
+    z-index: 2;
+    transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0s;
+    transition-delay: 1s;
+}
+
+.reading-game-visual {
+    flex: 1 1 45%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn-game {
+    max-width: 400px;
+    width: 100%;
+    padding: clamp(12px, 2vw, 20px) clamp(16px, 4vw, 32px);
+}
+
 /* Section Form */
 .modal {
     display: none;
@@ -1031,6 +1103,59 @@ iframe {
         text-align: center;
     }
 
+    /* Section Game */
+    .reading-game-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reading-game-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .reading-game-content,
+    .reading-game-visual {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .reading-game-content {
+        order: 2;
+        padding: 0 5vw;
+        text-align: left;
+    }
+
+    .reading-game-visual {
+        order: 1;
+        justify-content: center;
+        margin: 90px 0 10px;
+    }
+
+    .game-title {
+        text-align: center;
+    }
+
+    .dino-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 5%;
+        position: relative;
+    }
+
+    .dino-animation {
+        width: clamp(180px, 28vw, 260px);
+    }
+    .btn-wrapper {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+    }
     /* Section Toys */
 
     /* Section Contacts */
