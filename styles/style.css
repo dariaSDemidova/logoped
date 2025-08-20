@@ -478,7 +478,6 @@ iframe {
     justify-content: center;
     max-width: 100%;
     flex-wrap: wrap;
-    flex-wrap: wrap;
     margin: 0 auto;
 }
 
@@ -800,16 +799,17 @@ iframe {
         text-align: center;
     }
     
-    /* Section Toys */
+    /* Section Reviews */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .reviews-cards {
         display: none;
     }
-
-    .reviews-title::before {
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
+    
     .carousel {
         display: flex;
         align-items: center;
@@ -828,8 +828,8 @@ iframe {
         flex: 0 0 100%;
         justify-content: center;
         align-items: center;
-        width: clamp(240px, 80vw, 450px);
-        height: clamp(280px, 85vw, 480px);
+        width: clamp(280px, 80vw, 460px);
+        height: clamp(300px, 85vw, 500px);
     }
 
     .frame {
@@ -844,7 +844,7 @@ iframe {
     }
 
     .review-image {
-        width: 34vw; 
+        width: 36vw; 
         position: relative;
         z-index: 2;
     }
@@ -857,8 +857,8 @@ iframe {
         border: none;
         cursor: pointer;
         z-index: 10;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .carousel-arrow.left {
@@ -903,21 +903,26 @@ iframe {
     /* Section Contacts */
 
     /* Section Toys */
-    .review-card {
-        width: 250px;
-        height: 280px;
-    }
 
-    .frame {
-        width: 100%;
-        height: 100%;
+    /* Section Reviews */
+    .review-card {
+        width: clamp(240px, 90vw, 360px);
+        height: clamp(260px, 95vw, 420px);
     }
 
     .review-image {
-        width: 140px;
-        height: auto;
+        width: clamp(140px, 50vw, 200px);
     }
 
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-arrow img {
+        width: 32px;
+    }
+    
     .carousel-arrow.left {
         left: 0;
     }
@@ -936,15 +941,6 @@ iframe {
         margin-top: 25%;
     }
 
-    .review-card {
-        width: 200px;
-        height: 230px;
-    }
-
-    .review-image {
-        width: 120px;
-        height: auto;
-    }
 }
 
 
