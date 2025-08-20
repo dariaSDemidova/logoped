@@ -691,7 +691,10 @@ iframe {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     position: relative;
     z-index: 2;
 }
@@ -700,14 +703,14 @@ iframe {
     position: absolute;
     bottom: 100%;
     right: 0;
-    transform: translateX(-5%) translateY(40%);
+    transform: translateX(0%) translateY(40%);
     transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0.8s;
     width: clamp(200px, 28vw, 280px);
     z-index: 1;
 }
 
 .dino-animation.visible {
-    transform: translateX(-5%) translateY(0%);
+    transform: translateX(0%) translateY(0%);
     opacity: 1;
     z-index: 2;
     transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0s;
