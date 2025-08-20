@@ -939,7 +939,40 @@ iframe {
     color: #FFFFFF;
 }
 
-/* .contacts {} */
+/* Section Contacts */
+.contacts__title::before {
+    background-image: url(../assets/images/puzzle-violet-2.png);
+}
+
+.contacts__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contacts__label {
+    font-size: clamp(20px, 1.25vw, 24px);
+}
+
+.contacts__link {
+    font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.contacts__map {
+    width: clamp(387px, 55.2vw, 900px);
+    height: clamp(387px, 41.3vw, 734px);
+}
+
+.contacts__map iframe {
+    width: 100%;
+    height: 100%;
+}
 
     /* Footer */
     .footer {
@@ -991,7 +1024,62 @@ iframe {
 }
 
 @media (max-width: 1024px) {
-    /* Header */ .header__nav-list { display: none; max-height: 0; overflow: hidden; position: fixed; top: 121px; left: 0; width: 100%; background: rgba(168, 227, 197, 0.7); flex-direction: column; align-items: center; padding: 32px 0; gap: 8px; z-index: 999; transition: max-height 0.4s ease, padding 0.3s ease; } .header__nav-list.open { display: flex; max-height: 500px; } .header__menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); opacity: 0; visibility: hidden; transition: opacity 0.3s ease; z-index: 998; } .header__menu-open .header__menu-overlay { opacity: 1; visibility: visible; } .header__nav-list a { color: var(--color-green-title); } .header__icons { justify-content: center; margin-left: auto; margin-right: auto; flex: 0 0 auto; } .header__burger { display: flex; }
+    /* Header */ 
+    .header__nav-list { 
+        display: none; 
+        max-height: 0; 
+        overflow: hidden; 
+        position: fixed; 
+        top: 121px; 
+        left: 0; 
+        width: 100%; 
+        background: rgba(168, 227, 197, 0.7); 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 32px 0; 
+        gap: 8px; 
+        z-index: 999; 
+        transition: max-height 0.4s ease, padding 0.3s ease; 
+    } 
+    
+    .header__nav-list.open { 
+        display: flex; 
+        max-height: 500px; 
+    } 
+    
+    .header__menu-overlay { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0,0,0,0.5); 
+        opacity: 0; 
+        visibility: hidden; 
+        transition: opacity 0.3s ease; 
+        z-index: 998; 
+    } 
+    
+    .header__menu-open 
+    .header__menu-overlay { 
+        opacity: 1; 
+        visibility: visible; 
+    } 
+    
+    .header__nav-list a { 
+        color: var(--color-green-title); 
+    } 
+    
+    .header__icons { 
+        justify-content: center; 
+        margin-left: auto; 
+        margin-right: auto; 
+        flex: 0 0 auto; 
+    } 
+    
+    .header__burger { 
+        display: flex; 
+    }
 
     /* Section About */
     .about-content {
@@ -1051,8 +1139,6 @@ iframe {
         white-space: normal;
         word-break: break-word;
     }
-
-    /* Section Contacts */
 }
 
 @media (max-width: 768px) {
@@ -1123,6 +1209,27 @@ iframe {
 
     /* Section Toys */
 
+    /* Section Contacts */
+    .contacts__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__title {
+        align-self: center;
+    }
+
+    .contacts__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: clamp(302px, 62.3vw, 387px);
+    }
+
     /* Footer */
     .footer__nav {
     display: none;
@@ -1138,7 +1245,7 @@ iframe {
     .footer__icons--mobile img {
     width: 60px;
     height: auto;
-    }
+}
 }
 
 
@@ -1168,6 +1275,9 @@ iframe {
     }
 
     /* Section Contacts */
+    .contacts__link {
+        font-size: 14px;
+    }
 
     /* Footer */
     .footer {
@@ -1192,7 +1302,10 @@ iframe {
 
     .footer__arrow img {
     min-width: 40px;
+    .contacts__label {
+        font-size: 18px;
     }
+}
 }
 
 @media (max-width: 420px) {
