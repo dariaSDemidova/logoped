@@ -462,24 +462,14 @@ iframe {
 }
 
 .hero__wrapper {
-    border: 1px solid rgb(191, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin: 75px 67px 0 160px;
+    border: 1px solid rgb(94, 255, 0);
+    padding: 0;
 }
 
-.hero__textBlock{
-        border: 1px solid black;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 98px;
-    margin-top: 95px;
-    margin-bottom: 95px;
+/* Текст */
+.hero__textBlock {
+    border: 1px solid rgb(0, 208, 255);
+
 }
 
 .hero__textBlock p {
@@ -490,17 +480,11 @@ iframe {
     padding: 35px 63px;
 }
 
+/* Картинка */
 .hero__imgBlock {
-    flex-shrink: 0;
-    max-width: 100%;
-}
+    border: 1px solid rgb(17, 0, 255);
 
-.hero__imgBlock img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
-
 
 /* Section About */
 .about-title::before {
