@@ -457,32 +457,51 @@ iframe {
 }
 
 /* Section Hero */
+.hero {
+    height: 700px;
+}
 .hero__wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "text image"
-    "btn  image";
-  align-items: center;
-  column-gap: 40px;
-  position: relative;
-  width: 100%;
-  min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: scale(1.01);
 }
 
-/* области грида */
+.hero__left {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    z-index: 2;
+    width: 42vw;
+    margin-top: clamp(40px, 10vw, 170px);
+    margin-bottom: clamp(30px, 5vw, 95px);
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    text-align: center;
+}
+
 .hero__textBlock { 
-    grid-area: text; 
-    text-align: center; 
-    z-index: 2; 
+        display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    width: 100%;
 }
 
 .hero__imgBlock { 
-    grid-area: image; 
-    align-self: end; 
-    justify-self: end; 
-    width: 70%; 
-    z-index: 1; 
+    position: relative;
+    top: 3vw;
+    left: 30vw;
+    left: 28vw;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 65%;
+}
+
+.hero__imgBlock img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero__textBlock p { 
@@ -490,22 +509,9 @@ iframe {
 }
 
 .hero__button { 
-    grid-area: btn; 
-    justify-self: center; 
-    padding: 35px 63px; 
-    border-radius: 30px; 
-}
-
-/* лёгкий наезд текста на картинку */
-.hero__textBlock { 
-    max-width: 45%; 
-    margin-right: -60px; }
-
-/* картинка */
-.hero__imgBlock img { 
-    display:block; 
-    width:100%; 
-    height:auto; 
+    width: 33vw;
+    height: 7vh;
+    align-self: center; 
 }
 
 /* Section About */
@@ -1222,6 +1228,42 @@ iframe {
         flex: 0 0 auto; 
     } 
 
+    /* Section Hero */
+    .hero {
+        height: auto;
+    }
+
+    .hero__wrapper {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        gap: 20px;
+    }
+
+     .hero__left {
+    position: static; 
+    width: 100%;
+    margin: 20px 0;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero__textBlock {
+     order: 1;
+  }
+
+  .hero__imgBlock {
+    order: 2;
+    position: static; 
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero__button {
+    width: 56vw;
+    order: 3;
+  }
+
     /* Section About */
     .about-content {
         flex-wrap: wrap;
@@ -1288,28 +1330,30 @@ iframe {
 
     /* Section Hero */
   .hero__wrapper{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "text"
-      "image"
-      "btn";
-    row-gap: 20px;
-    min-height: auto;
-    padding-top: 60px;
-  }
-
-  .hero__textBlock{ 
-    max-width: 100%; 
-    margin-right: 0; 
+   flex-direction: column;
+   text-align: center;
 }
 
-  .hero__imgBlock { 
-    width: 100%; 
-    justify-self: center; 
+.hero__left { 
+order: 1;
+max-width: 100%;
+align-items: center;
 }
 
-  .hero__button { 
-    justify-self: center; 
+.hero__imgBlock { 
+order: 2;
+width: 80%;
+margin: 20px auto;
+}
+
+.hero__textBlock p { 
+    font-size: clamp(24px, 1.667vw, 32px); 
+}
+
+.hero__button { 
+    order: 3;
+    align-self: center;
+    margin-top: 30px;
 }
 }
 
