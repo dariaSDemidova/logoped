@@ -49,18 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.querySelector(".open-modal");
   const closeBtn = modal.querySelector(".close-modal");
 
+  const disableScroll = () => (document.body.style.overflow = "hidden");
+  const enableScroll = () => (document.body.style.overflow = "");
+
   openBtn.addEventListener("click", (e) => {
     e.preventDefault();
     modal.style.display = "flex";
+    disableScroll();
   });
 
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
+    enableScroll();
   });
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.style.display = "none";
+      enableScroll();
     }
   });
 });
