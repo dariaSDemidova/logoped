@@ -69,4 +69,23 @@ document.addEventListener("DOMContentLoaded", () => {
       enableScroll();
     }
   });
+
+  const dino = document.querySelector(".dino-animation");
+  const section = document.querySelector(".reading-game-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            dino.classList.add("visible");
+          }, 800);
+          observer.unobserve(section);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(section);
 });
