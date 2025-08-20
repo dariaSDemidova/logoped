@@ -458,54 +458,44 @@ iframe {
 
 
 /* Section Toys */
-.section-special {
-    background-color: #E6F3FF;
+.toys {
+    position: relative;
+    height: clamp(600px, 60vw, 900px);
+    overflow: hidden;
 }
 
 .toys-fixed-group {
     position: relative;
-    width: 80%;
-    aspect-ratio: 4 / 3;
-    transform-origin: top left;
-    margin: 0 auto;
-}
-
-.toys-images-group {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .girl-with-dino {
-    display: block;
-    max-width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 40%;
     height: auto;
-    position: absolute;
     z-index: 1;
-}
-
-.dolls {
-    position: absolute;
-    bottom: -80px;
-    right: -60px;
-    max-width: 60%;
-    z-index: 2;
 }
 
 .toys-text {
     position: absolute;
-    top: 20px;
-    left: 35%;
-    transform: translateX(-2%);
-    background-color: rgba(243, 239, 255, 0.8);
-    padding: clamp(24px, 4vw, 42px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    font-size: clamp(16px, 1.2vw, 20px);
-    text-align: center;
-    z-index: 3;
+    top: 12%;
+    left: 45%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 34px;
+    z-index: 2;
+}
+
+.dolls {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 40%;
+    height: auto;
+    z-index: 2;
 }
 
 /* Section Services */
@@ -1049,6 +1039,52 @@ iframe {
     }
 
     /* Section Toys */
+    .toys {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .toys-fixed-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toys-text {
+        position: static;
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 40px;
+        background-color: rgba(243, 239, 255, 0.9);
+        padding: 24px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .toys-images-group {
+        position: relative;
+        width: 100%;
+        height: clamp(240px, 60vw, 600px);
+    }
+
+    .girl-with-dino {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 50%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .dolls {
+        position: absolute;
+        top: 42%;
+        left: 44%;
+        width: 50%;
+        height: auto;
+        z-index: 2;
+    }
 }
 
 
