@@ -1043,10 +1043,6 @@ iframe {
         align-self: center;
     }
 
-    .contacts__title::before {
-        background-image: url(../assets/images/puzzle-dark-pink.png);
-    }
-
     .contacts__content {
         flex-direction: column;
         text-align: center;
