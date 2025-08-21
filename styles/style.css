@@ -244,7 +244,7 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -399,6 +399,9 @@ iframe {
     background-color: #8fd7b2;
 }
 
+/* a.btn:hover {
+    color: white;
+} */
 
 /* Header */
 
@@ -1182,7 +1185,9 @@ iframe {
 
 
 @media (max-width: 575px) {
-
+    .title-decorative:before {
+        left: -18px;
+    }
     /* Section Form */
     .form-title {
         line-height: 1.5;

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             dino.classList.add("visible");
-          }, 800);
+          }, 500);
           observer.unobserve(section);
         }
       });
