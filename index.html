@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -101,49 +102,34 @@
 
         <section class="reviews section-common">
             <div class="container">
-            <h2 class="reviews-title title-decorative">Отзывы</h2>
-
-            <div class="reviews-cards">
-                <div class="review-card">
-                    <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                    <img src="assets/images/review1.png" alt="Отзыв 1" class="review-image" />
-                </div>
-                <div class="review-card">
-                    <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                    <img src="assets/images/review2.png" alt="Отзыв 2" class="review-image" />
-                </div>
-                <div class="review-card">
-                    <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                    <img src="assets/images/review3.png" alt="Отзыв 3" class="review-image" />
-                </div>
-            </div>
-            </div>
-            <div class="carousel">
-                <button class="carousel-arrow left">
-                    <img src="assets/icons/left-arrow.svg" alt="Назад">
-                </button>
-            
-                <div class="carousel-track">
-                    <div class="review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review1.png" alt="Отзыв 1" class="review-image" />
+                <h2 class="reviews-title title-decorative">Отзывы</h2>
+        
+                <div class="swiper reviews-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide review-card">
+                            <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                            <img src="assets/images/review1.png" alt="Отзыв 1" class="review-image" />
+                        </div>
+                        <div class="swiper-slide review-card">
+                            <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                            <img src="assets/images/review2.png" alt="Отзыв 2" class="review-image" />
+                        </div>
+                        <div class="swiper-slide review-card">
+                            <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                            <img src="assets/images/review3.png" alt="Отзыв 3" class="review-image" />
+                        </div>
                     </div>
-                    <div class="review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review2.png" alt="Отзыв 2" class="review-image" />
+        
+                    <div class="my-button-prev">
+                        <img src="assets/icons/left-arrow.svg" alt="Назад">
                     </div>
-                    <div class="review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review3.png" alt="Отзыв 3" class="review-image" />
+                    <div class="my-button-next">
+                        <img src="assets/icons/right-arrow.svg" alt="Вперёд">
                     </div>
                 </div>
-            
-                <button class="carousel-arrow right">
-                    <img src="assets/icons/right-arrow.svg" alt="Вперёд">
-                </button>
             </div>
-         
         </section>
+
 
 
         <section class="game"></section> 
@@ -226,6 +212,7 @@
 
 
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 
 </html>

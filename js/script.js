@@ -18,32 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const track = document.querySelector('.carousel-track');
-  const cards = document.querySelectorAll('.carousel .review-card');
-  const leftBtn = document.querySelector('.carousel-arrow.left');
-  const rightBtn = document.querySelector('.carousel-arrow.right');
+  const swiper = new Swiper('.reviews-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.my-button-next',
+    prevEl: '.my-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
 
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const cardWidth = cards[0].offsetWidth;
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-
-  leftBtn?.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  rightBtn?.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener('resize', updateCarousel);
-  updateCarousel();
 });
