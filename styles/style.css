@@ -399,9 +399,6 @@ iframe {
     background-color: #8fd7b2;
 }
 
-/* a.btn:hover {
-    color: white;
-} */
 
 /* Header */
 
@@ -686,7 +683,7 @@ iframe {
 .dino-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     margin: 0 auto;
 }
 
@@ -1145,7 +1142,7 @@ iframe {
     .dino-container {
         max-width: 100%;
         width: 100%;
-        margin: 0 5%;
+        /* margin: 0 5%; */
         position: relative;
     }
 
