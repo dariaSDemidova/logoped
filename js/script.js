@@ -1,25 +1,35 @@
-// Бургер меню
 const burger = document.querySelector('.header__burger');
-const navList = document.querySelector('.header__nav-list');
-const header = document.querySelector('.header');
+const nav = document.querySelector('.header__nav');
 const navLinks = document.querySelectorAll('.header__nav-list a');
 
 function closeMenu() {
-  header.classList.remove('header--menu-open');
-  navList.classList.remove('open');
   burger.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
+  nav.classList.remove('open');
 }
 
+// Открытие/закрытие меню
 burger.addEventListener('click', () => {
-  const isOpen = header.classList.toggle('header--menu-open');
-  navList.classList.toggle('open');
   burger.classList.toggle('open');
-  burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  nav.classList.toggle('open');
 });
 
-// при клике по ссылке меню закрываем
+// Закрытие при клике на ссылку
 navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+// Закрытие при клике вне меню
+document.addEventListener('mousedown', (e) => {
+  if (!nav.contains(e.target) && !burger.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+// Закрытие по Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeMenu();
+  }
+});
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

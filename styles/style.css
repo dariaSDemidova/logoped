@@ -1159,7 +1159,7 @@ iframe {
     }
 
     .hero__textBlock h1 {
-        font-size: 2.8vw;
+        font-size: 2.7vw;
     }
 
     .hero__button {
@@ -1184,7 +1184,7 @@ iframe {
         align-items: center; 
         gap: 6px; 
         position: relative; 
-        z-index: 10; 
+        z-index: 1001; 
         width: 39px; 
         height: 39px; 
         background: none; 
@@ -1235,36 +1235,49 @@ iframe {
         width: 39px; 
     } 
 
-    .header__nav-list { 
-        display: none;
-        width: 100%;
-        background: rgba(168, 227, 197, 0.7);
-        padding: 32px 0;
-        position: relative;
-        z-index: 5;
-        transition: max-height 0.4s ease, padding 0.3s ease;
+    /*    .header__nav.menu-open {
+        display: flex;
+}*/
 
-        flex-direction: column; 
-        align-items: center; 
+
+    .header__nav {
+        /*position: absolute;
+        top: 100%;
         padding: 32px 0;
-        /*max-height: 0; 
-        overflow: hidden; 
-        position: fixed; 
-        top: 121px; 
-        left: 0; 
-        width: 100%; 
-        background: rgba(168, 227, 197, 0.7); 
-        flex-direction: column; 
-        align-items: center; 
-        padding: 32px 0; 
-        gap: 8px; 
-        z-index: 999; 
-        transition: max-height 0.4s ease, padding 0.3s ease; */ 
+        gap: 8px;
+        left: 0;
+        width: 100%;
+        background: rgba(168, 227, 197, 0.95);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 1000;*/
+        
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(168, 227, 197, 0.95);
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        padding: 0;
+        margin-top: 8px; /* отступ под header */
+    }
+
+    .header__nav.open {
+         max-height: 500px; /* высота раскрытого меню */
+        padding: 32px 0;
+    }
+
+    .header__nav-list { 
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
     } 
     
     .header__nav-list.open { 
         display: flex; 
-        max-height: 500px; 
     } 
     
     .header__menu-open { 
@@ -1272,15 +1285,13 @@ iframe {
         visibility: visible; 
     } 
     
+    
     .header__nav-list a { 
         color: var(--color-green-title); 
     } 
     
     .header__icons { 
-        justify-content: center; 
-        margin-left: auto; 
-        margin-right: auto; 
-        flex: 0 0 auto; 
+        justify-content: center;
     } 
 
     /* Section Hero */
