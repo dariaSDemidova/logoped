@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    min-width: 320px; 
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -244,7 +244,7 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -356,6 +356,10 @@ iframe {
     background: rgba(235, 229, 243, 0.60);
 }
 
+.bg-pink {
+    background: rgba(255, 234, 233, 0.60);
+}
+
 .bg-none {
     background: none;
 }
@@ -408,7 +412,8 @@ iframe {
 }
 
 .about-paragraph {
-    font-size: clamp(20px, 1.25vw, 24px);;
+    font-size: clamp(20px, 1.25vw, 24px);
+    ;
 }
 
 .about-content {
@@ -456,146 +461,274 @@ iframe {
 
 
 /* Section Services */
-
-
-
-
-/* Section Reviews */
-.reviews {
-    padding: 60px 10px;
+.services__title::before {
+    background-image: url('../assets/images/puzzle-violet.png');
 }
 
-.reviews-title::before {
-    background-image: url('../assets/images/puzzle-pink.png');
-}
-
-.reviews-swiper {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.swiper-wrapper {
+.services-block__top {
     display: flex;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.swiper-slide.review-card {
+.services-block__arrows {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.services-block__arrow {
+    width: 80px;
     flex-shrink: 0;
-    width: clamp(260px, 28vw, 440px);
-    height: clamp(290px, 30vw, 460px);
+    aspect-ratio: 1/1;
+}
+
+.services-block__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.services-block__card {
+    max-width: 500px;
+    width: 100%;
+    height: 176px;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.review-card .frame {
-    position: absolute;
-    top: 0;
-    left: 0;
+.descr .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.descr__img-wrapper {
+    position: relative;
+    width: clamp(210px, 21.354vw, 410px);
+    flex-shrink: 0;
+    aspect-ratio: 2/3;
+}
+
+.descr__img {
     width: 100%;
     height: 100%;
-    z-index: 1;
-    object-fit: contain;
-    pointer-events: none;
+    object-fit: cover;
 }
 
-.review-card .review-image {
+.descr__img-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 53%;
-    height: auto;
-    z-index: 2;
-    object-fit: contain;
+    top: -20%;
+    right: -70%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 19.375vw, 372px);
+    height: clamp(130px, 11.042vw, 212px);
+    flex-shrink: 0;
+    border-radius: 50%;
 }
 
-.my-button-prev,
-.my-button-next {
+.descr__img-text:after {
+    content: "";
+    background: url(../assets/icons/triangle.svg) center / cover no-repeat;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 10;
+    left: 30px;
+    bottom: 10px;
+    width: 40px;
+    height: 36px;
+    flex-shrink: 0;
 }
 
-.my-button-prev {
-    left: -10px;
+.descr__card {
+    padding: 40px;
+    max-width: 852px;
 }
 
-.my-button-next {
-    right: -10px;
+.price__title {
+    display: block;
 }
 
-@media  (max-width: 1023px) {
-    .reviews {
+.price__item {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.price__item:nth-child(even) {
+    background-color: var(--color-light-green);
+}
+
+.price__item p {
+    width: calc(100% / 3);
+}
+
+@media(max-width: 1200px) {
+    .descr__img-text {
+        top: -40%;
+        right: -80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .services-block .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .services__title {
+        align-self: center;
+    }
+
+    .services-block__top,
+    .services-block__bottom {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .services-block__arrows {
+        display: none;
+    }
+
+    .services-block__card {
+        max-width: 100%;
+        height: 130px;
+    }
+
+    .descr .container {
+        flex-direction: column;
+    }
+
+    .descr__img-text {
+        padding: 20px;
+    }
+
+    .descr__img-text:after {
+        width: 30px;
+        height: 30px;
+    }
+
+    .descr__card {
         padding: 40px 20px;
-        }
-
-    .swiper-slide.review-card {
-        width: clamp(300px, 84vw, 380px);
-        height: clamp(320px, 84vw, 390px);
     }
 
-    .review-card .review-image {
-        width: clamp(140px, 50vw, 180px);
+    .price__item {
+        padding: 20px;
     }
+}
 
-    .my-button-prev,
-    .my-button-next {
-        width: 32px;
-        height: 32px;
-    }
+@media(max-width: 575px) {
 
-    .my-button-prev {
-        left: -6px;
-    }
-
-    .my-button-next {
-        right: -6px;
-    }
-    }
-
-@media (max-width: 767px) {
     .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-    .reviews {
-        padding: 32px 16px;
+        padding: 0 10px;
     }
 
-    .swiper-slide.review-card {
-        width: clamp(240px, 80vw, 320px);
-        height: clamp(250px, 80vw, 360px);
+    .services-block__card {
+        padding: 0 20px;
     }
 
-    .review-card .review-image {
-        width: clamp(100px, 44vw, 160px);
+    .descr__card {
+        padding: 20px 10px;
     }
 
-    .my-button-prev,
-    .my-button-next {
-        width: 36px;
-        height: 36px;
+    .descr__img-text {
+        right: -20%;
     }
 
-    .my-button-prev {
-        left: -6px;
+    .price__item {
+        text-transform: initial;
+        padding: 10px;
+        gap: 5px;
     }
 
-    .my-button-next {
-        right: -6px;
+    .price__item p {
+        font-size: 14px;
     }
+
+    .first-p {
+        width: 50% !important;
+    }
+}
+
+/* Section Reviews */
+
+
+
+/* Section Game */
+
+.game-title::before {
+    background-image: url('../assets/images/puzzle-pink-2.png');
+}
+
+.reading-game-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: clamp(10px, 3vw, 40px);
+}
+
+.reading-game-content {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dino-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 500px; */
+    margin: 0 auto;
+}
+
+.game-photo1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.dino-animation {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    transform: translateX(0%) translateY(40%);
+    transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0.8s;
+    width: clamp(200px, 28vw, 280px);
+    z-index: 1;
+}
+
+.dino-animation.visible {
+    transform: translateX(0%) translateY(0%);
+    opacity: 1;
+    z-index: 2;
+    transition: transform 0.8s ease, opacity 0.8s ease, z-index 0s 0s;
+    transition-delay: 1s;
+}
+
+.reading-game-visual {
+    flex: 1 1 45%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn-game {
+    max-width: 400px;
+    width: 100%;
+    padding: clamp(12px, 2vw, 20px) clamp(16px, 4vw, 32px);
 }
 
 /* Section Form */
@@ -630,7 +763,7 @@ iframe {
     background: none;
     border: none;
     cursor: pointer;
-    }
+}
 
 .modal-content h2 {
     font-size: 20px;
@@ -705,18 +838,32 @@ iframe {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 24px;
-    grid-template-areas: 
-    "nameinput message"
-    "ageinput message"
-    "phoneinput formbutton";
+    grid-template-areas:
+        "nameinput message"
+        "ageinput message"
+        "phoneinput formbutton";
     margin-bottom: 50px;
 }
 
-.name-input {grid-area: nameinput;}
-.message {grid-area: message;}
-.age-input {grid-area: ageinput;}
-.phone-input {grid-area: phoneinput;}
-.form-button {grid-area: formbutton;}
+.name-input {
+    grid-area: nameinput;
+}
+
+.message {
+    grid-area: message;
+}
+
+.age-input {
+    grid-area: ageinput;
+}
+
+.phone-input {
+    grid-area: phoneinput;
+}
+
+.form-button {
+    grid-area: formbutton;
+}
 
 
 .form-content input,
@@ -765,10 +912,12 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .checkbox a {
     color: #E5097F;
     text-decoration: underline;
 }
+
 .checkbox label {
     font-size: 14px;
 }
@@ -779,12 +928,47 @@ iframe {
     border-radius: 8px;
     color: #FFFFFF;
 }
-/* .contacts {} */
+
+/* Section Contacts */
+.contacts__title::before {
+    background-image: url(../assets/images/puzzle-violet-2.png);
+}
+
+.contacts__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contacts__label {
+    font-size: clamp(20px, 1.25vw, 24px);
+}
+
+.contacts__link {
+    font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.contacts__map {
+    width: clamp(387px, 55.2vw, 900px);
+    height: clamp(387px, 41.3vw, 734px);
+}
+
+.contacts__map iframe {
+    width: 100%;
+    height: 100%;
+}
 
 /* .footer {} */
 
 
 @media (max-width: 1440px) {
+
     /* Section About */
     .about-text {
         gap: 20px;
@@ -792,10 +976,12 @@ iframe {
 }
 
 @media (max-width: 1024px) {
+
     /* Section About */
     .about-content {
         flex-wrap: wrap;
     }
+
     .about-images {
         width: 100%;
         flex-direction: row;
@@ -806,66 +992,75 @@ iframe {
         padding-left: 30px;
         padding-right: 30px;
     }
+
     .form-content {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 24px;
-        grid-template-areas: 
-        "nameinput"
-        "ageinput"
-        "phoneinput"
-        "message"
-        "formbutton";
+        grid-template-areas:
+            "nameinput"
+            "ageinput"
+            "phoneinput"
+            "message"
+            "formbutton";
         margin-bottom: 50px;
     }
+
     .form-button {
         padding-top: 24px;
         padding-bottom: 24px;
     }
+
     .form-text {
         width: 100%;
         margin-top: 100px;
     }
+
     .form-image {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .form-title {
         margin-bottom: 20px;
     }
+
     .checkbox label {
         display: block;
         white-space: normal;
     }
+
     .checkbox label a {
         display: inline;
         white-space: normal;
         word-break: break-word;
     }
-
-    /* Section Contacts */
 }
 
 @media (max-width: 768px) {
     .btn {
         font-size: 20px;
     }
+
     /* Section About */
     .about-wrapper {
         display: flex;
         flex-direction: column;
     }
+
     .about-title {
         align-self: center;
     }
+
     .about-paragraph {
         text-align: center;
     }
+
     .about-content {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
-        grid-template-areas: 
+        grid-template-areas:
             "image1"
             "text1"
             "text2"
@@ -874,24 +1069,122 @@ iframe {
             "image3";
 
     }
+
     .about-texts,
     .about-images {
         display: contents;
     }
-    .text-1 {grid-area: text1;}
-    .text-2 {grid-area: text2;}
-    .text-3 {grid-area: text3;}
-    .image-1 {grid-area: image1;}
-    .image-2 {grid-area: image2;}
-    .image-3 {grid-area: image3;}
+
+    .text-1 {
+        grid-area: text1;
+    }
+
+    .text-2 {
+        grid-area: text2;
+    }
+
+    .text-3 {
+        grid-area: text3;
+    }
+
+    .image-1 {
+        grid-area: image1;
+    }
+
+    .image-2 {
+        grid-area: image2;
+    }
+
+    .image-3 {
+        grid-area: image3;
+    }
+
     .about-subtitle {
         text-align: center;
     }
 
+    /* Section Game */
+    .reading-game-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reading-game-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .reading-game-content,
+    .reading-game-visual {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .reading-game-content {
+        order: 2;
+        padding: 0 5vw;
+        text-align: left;
+    }
+
+    .reading-game-visual {
+        order: 1;
+        justify-content: center;
+        margin: 90px 0 10px;
+    }
+
+    .game-title {
+        text-align: center;
+    }
+
+    .dino-container {
+        max-width: 100%;
+        width: 100%;
+        /* margin: 0 5%; */
+        position: relative;
+    }
+
+    .dino-animation {
+        width: clamp(180px, 28vw, 260px);
+    }
+    .btn-wrapper {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    /* Section Toys */
+
+    /* Section Contacts */
+    .contacts__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__title {
+        align-self: center;
+    }
+
+    .contacts__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: clamp(302px, 62.3vw, 387px);
+    }
 }
 
 
 @media (max-width: 575px) {
+    .title-decorative:before {
+        left: -18px;
+    }
     /* Section Form */
     .form-title {
         line-height: 1.5;
@@ -914,23 +1207,25 @@ iframe {
     .form-image {
         top: -10%;
     }
+
     /* Section Contacts */
+    .contacts__label {
+        font-size: 18px;
+    }
 
-    /* Section Toys */
-
-    /* Section Reviews */
-    
+    .contacts__link {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 420px) {
+
     /* Section Form */
     .form-image {
         top: -5%;
     }
+
     .form-text {
         margin-top: 25%;
     }
-
 }
-
-
