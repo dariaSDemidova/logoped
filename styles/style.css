@@ -408,6 +408,7 @@ iframe {
 
 .header { 
     padding: 20px 0; 
+    position: relative;
 } 
 
 .header__wrapper { 
@@ -423,12 +424,24 @@ iframe {
 } 
 
 .header__nav { 
-    display: flex; 
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  display: flex;
+  background: transparent;        /* без фона на десктопе */
+  padding: 0;
+  max-height: none;
+  overflow: visible;
+  transition: none;               /* анимации не нужны на десктопе */
+  z-index: 1;        
 } 
 
 .header__nav-list { 
     display: flex; 
     gap: 24px; 
+    margin: 0;
+    padding: 0;
 } 
 
 .nav-list__item { 
@@ -1235,45 +1248,30 @@ iframe {
         width: 39px; 
     } 
 
-    /*    .header__nav.menu-open {
-        display: flex;
-}*/
-
-
     .header__nav {
-        /*position: absolute;
-        top: 100%;
-        padding: 32px 0;
-        gap: 8px;
-        left: 0;
-        width: 100%;
-        background: rgba(168, 227, 197, 0.95);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        z-index: 1000;*/
-        
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(168, 227, 197, 0.95);
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease, padding 0.4s ease;
-        padding: 0;
-        margin-top: 8px; /* отступ под header */
+    position: static;            /* <-- ключ: теперь это отдельный блок под шапкой */
+    left: auto; top: auto; transform: none;
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    background: #a8e3c5;
+    overflow: hidden;
+    max-height: 0;               /* скрытое меню */
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0;
     }
 
     .header__nav.open {
-         max-height: 500px; /* высота раскрытого меню */
+        max-height: 500px; /* высота раскрытого меню  */
         padding: 32px 0;
+        background: rgba(168, 227, 197, 0.7);
     }
 
     .header__nav-list { 
         flex-direction: column;
-        gap: 8px;
-        text-align: center;
+    gap: 8px;
+    text-align: center;
+    margin: 0; padding: 0;
     } 
     
     .header__nav-list.open { 

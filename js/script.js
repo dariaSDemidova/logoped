@@ -7,28 +7,25 @@ function closeMenu() {
   nav.classList.remove('open');
 }
 
-// Открытие/закрытие меню
 burger.addEventListener('click', () => {
   burger.classList.toggle('open');
   nav.classList.toggle('open');
 });
 
-// Закрытие при клике на ссылку
 navLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-// Закрытие при клике вне меню
 document.addEventListener('mousedown', (e) => {
   if (!nav.contains(e.target) && !burger.contains(e.target)) {
     closeMenu();
   }
 });
 
-// Закрытие по Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeMenu();
   }
 });
+
 
 
 
