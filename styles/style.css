@@ -1555,6 +1555,25 @@ transition: all 0.22s ease;
     .dino-animation {
         width: clamp(180px, 28vw, 260px);
     }
+
+    .dino-animation.visible {
+        animation: bounceIn 0.8s ease;
+    }
+
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+        }
+
+        60% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    
     .btn-wrapper {
         order: 3;
         display: flex;
