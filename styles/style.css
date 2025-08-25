@@ -244,7 +244,7 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -683,7 +683,7 @@ iframe {
 .dino-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     margin: 0 auto;
 }
 
@@ -1142,7 +1142,7 @@ iframe {
     .dino-container {
         max-width: 100%;
         width: 100%;
-        margin: 0 5%;
+        /* margin: 0 5%; */
         position: relative;
     }
 
@@ -1201,7 +1201,9 @@ iframe {
 
 
 @media (max-width: 575px) {
-
+    .title-decorative:before {
+        left: -18px;
+    }
     /* Section Form */
     .form-title {
         line-height: 1.5;
