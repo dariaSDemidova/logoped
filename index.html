@@ -13,12 +13,51 @@
 </head>
 
 <body>
-    <header class="header"></header>
+    <header id="header" class="header">
+        <div class="header__bar bg-green">
+            <div class="header__wrapper container">
+            <a href="/" class="header__logo"><img src="./assets/logo/logo.svg" alt="Logo" /></a>
+            
+            <div class="header__icons">
+                <a href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/whatsapp.svg" alt="WhatsApp"/></a>
+                <a href="mailto:mitornadya@yandex.ru" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/email.svg" alt="Email"/></a>
+                <a href="tel:+79111988524"><img src="./assets/icons/phone.svg" alt="Позвонить по номеру +7 (911) 198-85-24"/></a>
+            </div>
+            <button class="header__burger" aria-label="Меню" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        </div>
+        
+        <nav class="header__nav">
+                <ul class="header__nav-list text-black text-uppercase list-unstyled">
+                    <li class="nav-list__item"><a class="text-decoration-none" href="#about">Обо мне</a></li>
+                    <li class="nav-list__item"><a class="text-decoration-none" href="#services">Услуги и Прайс</a></li>
+                    <li class="nav-list__item"><a class="text-decoration-none" href="#reviews">Отзывы</a></li>
+                    <li class="nav-list__item"><a class="text-decoration-none" href="#game">Развивающая игра</a></li>
+                    <li class="nav-list__item"><a class="text-decoration-none" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+    </header>
     <main>
 
-        <!-- <section class="hero">
-        </section> -->
-        <section class="about section-common">
+        <section id="hero" class="hero">
+            <div class="hero__wrapper container">
+                <div class="hero__left">
+                    <div class="hero__textBlock text-uppercase ">
+                        <h1>Кабинет Логопедической помощи</h1>
+                        <p>путь к красивой и правильной речи начинается здесь</p>
+                    </div>
+                    <a class="hero__button btn" href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer" type="button">Записаться на консультацию</a>
+                </div>
+                <div class="hero__imgBlock">
+                    <img src="./assets/images/dino-banner.png" alt="Динозаврик">
+                </div>
+            </div>
+        </section> 
+        <section id="about" class="about section-common">
             <div class="about-wrapper container">
                 <h2 class="about-title title-decorative">Обо мне</h2>
 
@@ -104,7 +143,7 @@
         </section>
         <!-- <section class="toys section-common">
         </section> -->
-        <section class="services">
+        <section id="services" class="services">
             <div class="services-block section-common">
                 <div class="container">
                     <h2 class="services__title title-decorative">Услуги и Прайс</h2>
@@ -199,9 +238,8 @@
             </div>
 
         </section>
-        <!--  <section class="reviews"></section>
-        <section class="game"></section> -->
-        <section class="reading-game-section section-common">
+        <!--  <section class="reviews"></section>-->
+        <section id="game" class="reading-game-section section-common">
             <div class="container">
                 <h2 class="game-title title-decorative">
                     Развивающая игра
@@ -353,7 +391,38 @@
         </section>
 
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer bg-green">
+      <div class="footer__wrapper container">
+        <div class="footer__logo">
+          <a href="/"><img src="./assets/logo/logo.svg" alt="Logo" /></a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list text-black text-uppercase list-unstyled">
+            <li class="nav-list__item"><a class="text-decoration-none" href="#about">Обо мне</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#services">Услуги и Прайс</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#reviews">Отзывы</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#game">Развивающая игра</a></li>
+            <li class="nav-list__item"><a class="text-decoration-none" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="footer__icons--mobile">
+          <a href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer"
+            ><img src="./assets/icons/whatsapp.svg" alt="WhatsApp"
+          /></a>
+          <a href="mailto:mitornadya@yandex.ru" target="_blank" rel="noopener noreferrer"
+            ><img src="./assets/icons/email.svg" alt="Email"
+          /></a>
+          <a href="tel:+7 (911) 198-85-24">
+            <img
+              src="./assets/icons/phone.svg"
+              alt="Позвонить по номеру +7 (911) 198-85-24"
+            />
+          </a>
+        </div>
+        <div class="footer__arrow">
+          <a href="#header"><img src="./assets/icons/ScrollUp.svg" alt="ScrollUp" /></a>
+        </div>
+    </footer>
 
 
     <script src="./js/script.js"></script>

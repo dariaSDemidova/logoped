@@ -1,3 +1,53 @@
+//Header burger menu
+const burger = document.querySelector('.header__burger');
+const nav = document.querySelector('.header__nav');
+const navLinks = document.querySelectorAll('.header__nav-list a');
+
+function closeMenu() {
+  burger.classList.remove('open');
+  nav.classList.remove('open');
+}
+
+function getHeaderHeight() {
+  const headerWrapper = document.querySelector('.header__wrapper');
+  return headerWrapper ? headerWrapper.offsetHeight : 0;
+}
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    if (window.innerWidth <= 1024) {
+      e.preventDefault();
+
+      const targetId = link.getAttribute('href').slice(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      const headerHeight = getHeaderHeight();
+      const topPos = targetEl.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: topPos,
+        behavior: 'smooth'
+      });
+
+      closeMenu();
+    }
+  });
+});
+
+// Закрытие при клике вне меню
+document.addEventListener('mousedown', (e) => {
+  if (!nav.contains(e.target) && !burger.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("privacy-modal");
   const openBtn = document.querySelector(".open-modal");
