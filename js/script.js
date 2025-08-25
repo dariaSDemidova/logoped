@@ -91,5 +91,26 @@ document.addEventListener("DOMContentLoaded", () => {
   },
   { threshold: 0.5 }
   );
-   observer.observe(section);
+  observer.observe(section);
+  
+  const swiper = new Swiper(".reviews-swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    loop: false,
+    navigation: {
+      nextEl: ".my-button-next",
+      prevEl: ".my-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
 });
