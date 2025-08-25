@@ -74,24 +74,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const dino = document.querySelector(".dino-animation");
-  const section = document.querySelector(".reading-game-section");
+  // const dino = document.querySelector(".dino-animation");
+  // const section = document.querySelector(".reading-game-section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-         dino.classList.remove("visible"); 
-        void dino.offsetWidth; 
-        dino.classList.add("visible");
-      } else {
-        dino.classList.remove("visible");
-      }
-    });
-  },
-  { threshold: 0.5 }
-  );
-  observer.observe(section);
+  // const observer = new IntersectionObserver(
+  //   (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //        dino.classList.remove("visible"); 
+  //       void dino.offsetWidth; 
+  //       dino.classList.add("visible");
+  //     } else {
+  //       dino.classList.remove("visible");
+  //     }
+  //   });
+  // },
+  // { threshold: 0.5 }
+  // );
+  // observer.observe(section);
   
   const swiper = new Swiper(".reviews-swiper", {
     slidesPerView: 'auto',
