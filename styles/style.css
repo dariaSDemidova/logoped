@@ -609,7 +609,52 @@ transition: all 0.22s ease;
 
 
 /* Section Toys */
+.toys-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+}
 
+.toys {
+    padding: 80px 0;
+}
+
+.toys-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.girl-with-dino {
+    width: 70%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.dolls {
+    position: absolute;
+    bottom: -10%;
+    right: 8%;
+    width: 45%;
+    height: auto;
+    z-index: 2;
+}
+
+.toys-text {
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 24px;
+    z-index: 2;
+}
 
 /* Section Services */
 .services__title::before {
@@ -1716,8 +1761,47 @@ transition: all 0.22s ease;
         width: 100%;
         margin-top: 30px;
     }
-    /* Section Toys */
 
+    /* Section Toys */
+    .toys-image-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .toys-content {
+        gap: 32px;
+    }
+
+    .girl-with-dino {
+        width: 60%;
+        max-width: 600px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .dolls {
+        bottom: -5%;
+        right: 0;
+        width: 50%;
+    }
+
+    .toys-text {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.6);
+
+        z-index: 1;
+    }
+    
     /* Section Contacts */
     .contacts__wrapper {
         display: flex;
