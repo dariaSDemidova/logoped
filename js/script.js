@@ -31,15 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            dino.classList.add("visible");
-          }, 500);
-          observer.unobserve(section);
-        }
-      });
-    },
-    { threshold: 0.5 }
+         dino.classList.remove("visible"); 
+        void dino.offsetWidth; 
+        dino.classList.add("visible");
+      } else {
+        dino.classList.remove("visible");
+      }
+    });
+  },
+  { threshold: 0.5 }
   );
-
-  observer.observe(section);
+   observer.observe(section);
 });
