@@ -975,7 +975,7 @@ transition: all 0.22s ease;
     }
 
     .review-card .review-image {
-        width: clamp(100px, 44vw, 160px);
+        width: clamp(90px, 40vw, 160px);
     }
 
     .my-button-prev,
