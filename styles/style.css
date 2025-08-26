@@ -1284,10 +1284,13 @@ transition: all 0.22s ease;
 
 .contacts__link {
     font-size: clamp(16px, 1.6vw, 20px);
+    transition: all 0.3s ease;
+    
 }
 
 .contacts__link:hover {
     color: var(--color-black);
+    transform: scale(1.02);
 }
 
 .contacts__map {
