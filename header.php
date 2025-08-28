@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logoped</title>
 
@@ -15,13 +15,13 @@
     <header id="header" class="header">
         <div class="header__bar bg-green">
             <div class="header__wrapper container">
-                <a href="/" class="header__logo"><img src="./assets/logo/logo.svg" alt="Logo" /></a>
+                <a href="/" class="header__logo"><img src="<?php bloginfo('template_url'); ?>/assets/logo/logo.svg" alt="Logo" /></a>
                 <div class="header__icons">
                     <a href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer"><img
-                            src="./assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                            src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
                     <a href="mailto:mitornadya@yandex.ru" target="_blank" rel="noopener noreferrer"><img
-                            src="./assets/icons/email.svg" alt="Email" /></a>
-                    <a href="tel:+79111988524"><img src="./assets/icons/phone.svg"
+                            src="<?php bloginfo('template_url'); ?>/assets/icons/email.svg" alt="Email" /></a>
+                    <a href="tel:+79111988524"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
                             alt="Позвонить по номеру +7 (911) 198-85-24" /></a>
                 </div>
                 <button class="header__burger" aria-label="Меню" type="button">
