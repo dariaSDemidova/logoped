@@ -14,7 +14,7 @@ get_header();
                     rel="noopener noreferrer">Записаться на консультацию</a>
             </div>
             <div class="hero__imgBlock">
-                <img src="./assets/images/dino-banner.png" alt="Динозаврик">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-banner.png" alt="Динозаврик">
             </div>
         </div>
     </section>
@@ -29,11 +29,11 @@ get_header();
                             учитель-логопед.</p>
                         <h3 class="about-subtitle">Образование</h3>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">ЛГПИ им. Герцена, дефектологический факультет</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Стаж педагогической деятельности 27 лет, из них 25 лет по
                                 специальности учитель-логопед в школьных и дошкольных образовательных учреждениях.
                             </p>
@@ -42,34 +42,34 @@ get_header();
                     <div class="about-text text-2">
                         <h3 class="about-subtitle">Курсы усовершенствования</h3>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Тематическое усовершенствование по логопедическому массажу с
                                 элементами точечного массажа при ДЦП и энцефалопатии</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Нарушения письма. Их предупреждение и преодоление</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Коррекция устной и письменной речи младших школьников.
                                 Преемственность в работе логопедов при обучении детей дошкольного и школьного
                                 возраста</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Коррекция нарушений письменной речи</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Центральные механизмы речи</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">«Диагностика и коррекция развития ребенка раннего возраста</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Обучение навыкам саморегуляции на основе метода функционального
                                 биоуправления, с использованием программ НПФ «Амалтея»</p>
                         </div>
@@ -77,25 +77,25 @@ get_header();
                     <div class="about-text text-3">
                         <h3 class="about-subtitle">Автор статей</h3>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Предупреждение ошибок чтения у учащихся начальных классов в школе
                                 индивидуального обучения</p>
                         </div>
                         <div class="about-item__wrapper">
-                            <img class="about-tick" src="./assets/icons/tick-icon.svg" alt="Галочка">
+                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                             <p class="about-item">Методы развития функциональной базы письменной речи</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-images">
                     <div class="about-image image-1">
-                        <img src="./assets/images/about-1.webp" alt="Фото логопеда">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-1.webp" alt="Фото логопеда">
                     </div>
                     <div class="about-image image-2">
-                        <img src="./assets/images/about-2.webp" alt="Логопед проводит занятие">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-2.webp" alt="Логопед проводит занятие">
                     </div>
                     <div class="about-image image-3">
-                        <img src="./assets/images/about-3.webp" alt="Логопед проводит занятие">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-3.webp" alt="Логопед проводит занятие">
                     </div>
                 </div>
             </div>
@@ -109,9 +109,9 @@ get_header();
                     <p>А помогать Вашему ребёнку на занятиях будет милый Динозаврик Гоша и его добрые друзья!</p>
                 </div>
                 <div class="toys-images-wrapper">
-                    <img src="./assets/images/girl-with-dino.webp" alt="Девочка с динозавром"
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/girl-with-dino.webp" alt="Девочка с динозавром"
                         class="girl-with-dino">
-                    <img src="./assets/images/dolls.png" alt="Друзья Гоши" class="dolls">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/dolls.png" alt="Друзья Гоши" class="dolls">
                 </div>
             </div>
         </div>
@@ -128,8 +128,8 @@ get_header();
                         дошкольного и младшего школьного возраста</div>
                 </div>
                 <div class="services-block__arrows">
-                    <img class="services-block__arrow" src="./assets/icons/arrow-down.svg" alt="стрелка вниз">
-                    <img class="services-block__arrow" src="./assets/icons/arrow-down.svg" alt="стрелка вниз">
+                    <img class="services-block__arrow" src="<?php bloginfo('template_url'); ?>/assets/icons/arrow-down.svg" alt="стрелка вниз">
+                    <img class="services-block__arrow" src="<?php bloginfo('template_url'); ?>/assets/icons/arrow-down.svg" alt="стрелка вниз">
                 </div>
                 <div class="services-block__bottom text-black text-center">
                     <div class="services-block__card bg-green-light rounded-20">устной речи при дислалии, дизартрии,
@@ -145,7 +145,7 @@ get_header();
         <div class="descr bg-violet-light section-special">
             <div class="container">
                 <div class="descr__img-wrapper">
-                    <img class="descr__img" src="./assets/images/dino.png" alt="динозавр">
+                    <img class="descr__img" src="<?php bloginfo('template_url'); ?>/assets/images/dino.png" alt="динозавр">
                     <div class="descr__img-text bg-white text-center">
                         Что ждёт Вашего ребёнка на занятии?
                     </div>
@@ -219,23 +219,23 @@ get_header();
             <div class="swiper reviews-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review1.png" alt="Отзыв 1" class="review-image" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review1.png" alt="Отзыв 1" class="review-image" />
                     </div>
                     <div class="swiper-slide review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review2.png" alt="Отзыв 2" class="review-image" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review2.png" alt="Отзыв 2" class="review-image" />
                     </div>
                     <div class="swiper-slide review-card">
-                        <img src="assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="assets/images/review3.png" alt="Отзыв 3" class="review-image" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review3.png" alt="Отзыв 3" class="review-image" />
                     </div>
                 </div>
                 <div class="my-button-prev">
-                    <img src="assets/icons/left-arrow.svg" alt="Назад">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/icons/left-arrow.svg" alt="Назад">
                 </div>
                 <div class="my-button-next">
-                    <img src="assets/icons/right-arrow.svg" alt="Вперёд">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/icons/right-arrow.svg" alt="Вперёд">
                 </div>
             </div>
         </div>
@@ -280,9 +280,9 @@ get_header();
                 </div>
                 <div class="reading-game-visual">
                     <div class="dino-container">
-                        <img src="assets/images/dino-animation.png" alt="Анимация динозавра"
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-animation.png" alt="Анимация динозавра"
                             class="dino-animation" />
-                        <img src="assets/images/game-1.webp" alt="Фото игры" class="game-photo1" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/game-1.webp" alt="Фото игры" class="game-photo1" />
                     </div>
                 </div>
             </div>
@@ -377,7 +377,7 @@ get_header();
                     </div>
                 </div>
                 <div class="form-image">
-                    <img src="./assets/images/dino-form-withframe.png" alt="Динозаврик">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-form-withframe.png" alt="Динозаврик">
                 </div>
             </div>
         </div>
