@@ -28,75 +28,81 @@ get_header();
                         <p class="about-paragraph">Рада приветствовать Вас! Меня зовут Надежда Юрьевна Митор, я
                             учитель-логопед.</p>
                         <h3 class="about-subtitle">Образование</h3>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">ЛГПИ им. Герцена, дефектологический факультет</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Стаж педагогической деятельности 27 лет, из них 25 лет по
-                                специальности учитель-логопед в школьных и дошкольных образовательных учреждениях.
-                            </p>
-                        </div>
+                        <?php 
+                        $articles = get_field('education_textarea');
+                        if( $articles ):
+                            $lines = explode("\n", $articles);
+                            foreach($lines as $line): 
+                                $line = trim($line);
+                                if($line): ?>
+                                    <div class="about-item__wrapper">
+                                        <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
+                                        <p class="about-item"><?php echo esc_html($line); ?></p>
+                                    </div>
+                            <?php endif;
+                            endforeach;
+                        endif;
+                        ?>
                     </div>
                     <div class="about-text text-2">
                         <h3 class="about-subtitle">Курсы усовершенствования</h3>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Тематическое усовершенствование по логопедическому массажу с
-                                элементами точечного массажа при ДЦП и энцефалопатии</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Нарушения письма. Их предупреждение и преодоление</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Коррекция устной и письменной речи младших школьников.
-                                Преемственность в работе логопедов при обучении детей дошкольного и школьного
-                                возраста</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Коррекция нарушений письменной речи</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Центральные механизмы речи</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">«Диагностика и коррекция развития ребенка раннего возраста</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Обучение навыкам саморегуляции на основе метода функционального
-                                биоуправления, с использованием программ НПФ «Амалтея»</p>
-                        </div>
+                        <?php 
+                        $articles = get_field('courses_textarea');
+                        if( $articles ):
+                            $lines = explode("\n", $articles);
+                            foreach($lines as $line): 
+                                $line = trim($line);
+                                if($line): ?>
+                                    <div class="about-item__wrapper">
+                                        <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
+                                        <p class="about-item"><?php echo esc_html($line); ?></p>
+                                    </div>
+                            <?php endif;
+                            endforeach;
+                        endif;
+                        ?>
                     </div>
                     <div class="about-text text-3">
                         <h3 class="about-subtitle">Автор статей</h3>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Предупреждение ошибок чтения у учащихся начальных классов в школе
-                                индивидуального обучения</p>
-                        </div>
-                        <div class="about-item__wrapper">
-                            <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
-                            <p class="about-item">Методы развития функциональной базы письменной речи</p>
-                        </div>
+
+                        <?php 
+                        $articles = get_field('author_articles_textarea');
+                        if( $articles ):
+                            $lines = explode("\n", $articles);
+                            foreach($lines as $line): 
+                                $line = trim($line);
+                                if($line): ?>
+                                    <div class="about-item__wrapper">
+                                        <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
+                                        <p class="about-item"><?php echo esc_html($line); ?></p>
+                                    </div>
+                            <?php endif;
+                            endforeach;
+                        endif;
+                        ?>
                     </div>
                 </div>
                 <div class="about-images">
                     <div class="about-image image-1">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-1.webp" alt="Фото логопеда">
+                        <?php 
+                        $img1 = get_field('about-image1'); 
+                        if( $img1 ): ?>
+                            <img src="<?php echo esc_url($img1); ?>" alt="Фото логопеда">
+                        <?php endif; ?>
                     </div>
                     <div class="about-image image-2">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-2.webp" alt="Логопед проводит занятие">
+                        <?php 
+                        $img2 = get_field('about-image2'); 
+                        if( $img2 ): ?>
+                            <img src="<?php echo esc_url($img2); ?>" alt="Фото логопеда">
+                        <?php endif; ?>
                     </div>
                     <div class="about-image image-3">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/about-3.webp" alt="Логопед проводит занятие">
-                    </div>
+                        <?php 
+                        $img3 = get_field('about-image3'); 
+                        if( $img3 ): ?>
+                            <img src="<?php echo esc_url($img3); ?>" alt="Фото логопеда">
+                        <?php endif; ?>
                 </div>
             </div>
         </div>
