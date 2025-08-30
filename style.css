@@ -571,7 +571,7 @@ iframe {
 
 /* Section About */
 .about-title::before {
-    background-image: url('../assets/images/puzzle-blue.png');
+    background-image: url('./assets/images/puzzle-blue.png');
 }
 
 .about-paragraph {
@@ -670,7 +670,7 @@ iframe {
 
 /* Section Services */
 .services__title::before {
-    background-image: url('../assets/images/puzzle-violet.png');
+    background-image: url('./assets/images/puzzle-violet.png');
 }
 
 .services-block__top {
@@ -871,7 +871,7 @@ iframe {
 }
 
 .reviews-title::before {
-    background-image: url('../assets/images/puzzle-pink.png');
+    background-image: url('./assets/images/puzzle-pink.png');
 }
 
 .reviews-swiper {
@@ -1008,7 +1008,7 @@ iframe {
 /* Section Game */
 
 .game-title::before {
-    background-image: url('../assets/images/puzzle-pink-2.png');
+    background-image: url('./assets/images/puzzle-pink-2.png');
 }
 
 .reading-game-wrapper {
@@ -1275,7 +1275,7 @@ iframe {
 
 /* Section Contacts */
 .contacts__title::before {
-    background-image: url(../assets/images/puzzle-violet-2.png);
+    background-image: url(./assets/images/puzzle-violet-2.png);
 }
 
 .contacts__content {
