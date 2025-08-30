@@ -380,18 +380,24 @@ get_header();
             <div class="contacts__content">
                 <div class="contacts__text text-uppercase text-black">
                     <p class="contacts__label">наш Адрес:</p>
+                    <?php if( get_field('contact_address') ): ?>
                     <a class="contacts__link text-decoration-none"
                         href="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16"
-                        target="_blank">Санкт-Петербург, ул. Орбели, 19</a>
+                        target="_blank">
+                        <?php echo esc_html( get_field('contact_address') ); ?>
+                    </a>
+                    <?php endif; ?>
                     <p class="contacts__label">телефон:</p>
-                    <a class="contacts__link text-decoration-none" href="tel:+79111988524">+7
-                        (911) 198-85-24</a>
+                    <?php if( get_field('contact_phone') ): ?>
+                    <a class="contacts__link text-decoration-none" href="tel:<?php echo preg_replace('/\D+/', '', get_field('contact_phone')); ?>">
+                        <?php echo esc_html( get_field('contact_phone') ); ?>
+                    </a>
+                    <?php endif; ?>
                 </div>
                 <div class="contacts__map">
-                    <iframe
-                        src="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16"
-                        allowfullscreen>
-                    </iframe>
+                    <?php if( get_field('contact_map') ): ?>
+                        <?php echo get_field('contact_map'); ?>
+                        <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -401,3 +407,8 @@ get_header();
 <?php
 get_footer();
 ?>
+
+                    <!--<iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16"
+                        allowfullscreen>
+                    </iframe>-->
