@@ -304,22 +304,7 @@ get_header();
                         Оставьте заявку на
                         диагностику к профессионалу своего дела.</p>
                 </div>
-                <form>
-                    <div class="form-content">
-                        <input class="name-input" type="text" placeholder="Имя родителя" required>
-                        <input class="age-input" type="text" placeholder="Возраст ребёнка" required>
-                        <input class="phone-input" type="tel" placeholder="+7 (999) 999-99-99" required>
-                        <textarea class="message" name="message" id="message"
-                            placeholder="Введите ваше сообщение"></textarea>
-                        <button class="form-button btn" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" id="agree" required>
-                        <label for="agree">Заполняя данную форму, я соглашаюсь с <a class="open-modal"
-                                href="#">политикой обработки персональных
-                                данных</a></label>
-                    </div>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="a252526" title="Контактная форма"]'); ?>
                 <div class="modal" id="privacy-modal">
                     <div class="modal-content">
                         <button class="close-modal">&times;</button>
