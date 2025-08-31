@@ -380,24 +380,33 @@ get_header();
             <div class="contacts__content">
                 <div class="contacts__text text-uppercase text-black">
                     <p class="contacts__label">наш Адрес:</p>
-                    <?php if( get_field('contact_address') ): ?>
-                    <a class="contacts__link text-decoration-none"
-                        href="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16"
-                        target="_blank">
-                        <?php echo esc_html( get_field('contact_address') ); ?>
-                    </a>
-                    <?php endif; ?>
+                        <?php 
+                            $address = get_field('contact_address'); 
+                            $map_iframe = get_field('contact_map'); 
+                            $map_url = '';
+                            if ( $map_iframe && preg_match('/src="([^"]+)"/', $map_iframe, $matches)) {
+                            $map_url = $matches[1];
+                            }
+                        ?>
+                        <?php if( $address && $map_url ): ?>
+                        <a class="contacts__link text-decoration-none"
+                        href="<?php echo esc_url( $map_url ); ?>"
+                        target="_blank" rel="noopener noreferrer">
+                        <?php echo esc_html( $address ); ?>
+                        </a>
+                        <?php endif; ?>
                     <p class="contacts__label">телефон:</p>
-                    <?php if( get_field('contact_phone') ): ?>
-                    <a class="contacts__link text-decoration-none" href="tel:<?php echo preg_replace('/\D+/', '', get_field('contact_phone')); ?>">
-                        <?php echo esc_html( get_field('contact_phone') ); ?>
-                    </a>
-                    <?php endif; ?>
+                        <?php if( $phone = get_field('contact_phone') ): ?>
+                        <a class="contacts__link text-decoration-none"
+                        href="tel:<?php echo preg_replace('/\D+/', '', $phone); ?>">
+                        <?php echo esc_html( $phone ); ?>
+                        </a>
+                        <?php endif; ?>
                 </div>
                 <div class="contacts__map">
-                    <?php if( get_field('contact_map') ): ?>
-                        <?php echo get_field('contact_map'); ?>
-                        <?php endif; ?>
+                    <?php if( $map_iframe ): ?>
+                    <?php echo $map_iframe; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -408,7 +417,3 @@ get_header();
 get_footer();
 ?>
 
-                    <!--<iframe
-                        src="https://yandex.ru/map-widget/v1/?ll=30.315123%2C59.939095&mode=search&text=Санкт-Петербург,%20ул.%20Орбели,%2019&z=16"
-                        allowfullscreen>
-                    </iframe>-->
