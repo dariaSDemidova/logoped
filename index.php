@@ -218,25 +218,31 @@ get_header();
         </div>
 
     </section>
-
     <section id="reviews" class="reviews section-common">
         <div class="container">
             <h2 class="reviews-title title-decorative">Отзывы</h2>
             <div class="swiper reviews-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide review-card">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review1.png" alt="Отзыв 1" class="review-image" />
+
+                <?php
+                $args = array(
+                    'post_type'      => 'review',
+                    'posts_per_page' => -1,
+                    'order'          => 'DESC',
+                );
+                $reviews = new WP_Query($args);
+                if ($reviews->have_posts()): ?>
+                    <div class="swiper-wrapper">
+                        <?php while ($reviews->have_posts()): $reviews->the_post(); ?>
+                            <div class="swiper-slide review-card">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
+                                <?php if (has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail('large', ['class' => 'review-image']); ?>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
                     </div>
-                    <div class="swiper-slide review-card">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review2.png" alt="Отзыв 2" class="review-image" />
-                    </div>
-                    <div class="swiper-slide review-card">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-frame.png" alt="Рамка" class="frame" />
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/review3.png" alt="Отзыв 3" class="review-image" />
-                    </div>
-                </div>
+                <?php endif; wp_reset_postdata(); ?>
+
                 <div class="my-button-prev">
                     <img src="<?php bloginfo('template_url'); ?>/assets/icons/left-arrow.svg" alt="Назад">
                 </div>
@@ -246,7 +252,6 @@ get_header();
             </div>
         </div>
     </section>
-
     <section id="game" class="reading-game-section section-common">
         <div class="container">
             <h2 class="game-title title-decorative">
