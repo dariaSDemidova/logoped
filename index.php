@@ -295,7 +295,7 @@ get_header();
         </div>
     </section>
 
-    <section class="form-section section-common">
+    <section id="form" class="form-section section-common">
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-text">
