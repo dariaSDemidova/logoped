@@ -30,7 +30,7 @@
                             src="<?php bloginfo('template_url'); ?>/assets/icons/email.svg" alt="Email" /></a>
                     <?php endif; ?>
                     <a href="tel:<?php echo $clean_phone; ?>"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
-                            alt="Позвонить по номеру +7 (911) 198-85-24" /></a>
+                            alt="Позвонить по номеру <?php echo esc_html($clean_phone); ?>" /></a>
                     <?php endif; ?>
                 </div>
                 <button class="header__burger" aria-label="Меню" type="button">
