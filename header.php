@@ -15,7 +15,7 @@
     <header id="header" class="header">
         <div class="header__bar bg-green">
             <div class="header__wrapper container">
-                <a href="/" class="header__logo"><img src="<?php bloginfo('template_url'); ?>/assets/logo/logo.svg" alt="Logo" /></a>
+                <?php the_custom_logo(); ?>
                 <div class="header__icons">
                     <?php 
                         $phone = get_field('whatsapp_phone'); 

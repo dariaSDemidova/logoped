@@ -16,6 +16,7 @@ add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter( 'upload_mimes', 'svg_upload_allow' );
 
 function register_reviews_post_type() {
     register_post_type('review', array(
@@ -37,4 +38,23 @@ function register_reviews_post_type() {
         'supports'    => array('title', 'thumbnail'),
     ));
 }
+
+function svg_upload_allow($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+
+add_filter( 'wp_check_filetype_and_ext', function( $data, $file, $filename, $mimes ) {
+    if ( substr( $filename, -4 ) === '.svg' ) {
+        $data['ext']  = 'svg';
+        $data['type'] = 'image/svg+xml';
+    }
+    return $data;
+}, 10, 4 );
+
+add_filter( 'get_custom_logo', function( $html ) {
+    $html = str_replace( 'custom-logo-link', 'custom-logo-link header__logo', $html );
+    return $html;
+});
+
 add_action('init', 'register_reviews_post_type');

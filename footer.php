@@ -1,7 +1,7 @@
     <footer class="footer bg-green">
         <div class="footer__wrapper container">
             <div class="footer__logo">
-                <a href="/"><img src="<?php bloginfo('template_url'); ?>/assets/logo/logo.svg" alt="Logo" /></a>
+                <?php the_custom_logo(); ?>
             </div>
             <nav class="footer__nav">
                 <ul class="footer__nav-list text-black text-uppercase list-unstyled">
