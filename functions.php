@@ -16,3 +16,25 @@ add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+function register_reviews_post_type() {
+    register_post_type('review', array(
+        'labels' => array(
+            'name'               => 'Отзывы',
+            'singular_name'      => 'Отзыв',
+            'add_new'            => 'Добавить отзыв',
+            'add_new_item'       => 'Добавить новый отзыв',
+            'edit_item'          => 'Редактировать отзыв',
+            'new_item'           => 'Новый отзыв',
+            'view_item'          => 'Посмотреть отзыв',
+            'search_items'       => 'Искать отзывы',
+            'not_found'          => 'Отзывов не найдено',
+            'not_found_in_trash' => 'В корзине отзывов нет',
+            'menu_name'          => 'Отзывы',
+        ),
+        'public'      => true,
+        'menu_icon'   => 'dashicons-format-image',
+        'supports'    => array('title', 'thumbnail'),
+    ));
+}
+add_action('init', 'register_reviews_post_type');
