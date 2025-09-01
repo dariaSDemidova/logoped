@@ -253,52 +253,55 @@ get_header();
         </div>
     </section>
     <section id="game" class="reading-game-section section-common">
-        <div class="container">
-            <h2 class="game-title title-decorative">
-                Развивающая игра
-            </h2>
-            <div class="reading-game-wrapper">
-                <div class="reading-game-content">
-                    <p>
-                        <span class="fw-bold">«Я играю и читаю»</span> — развивающая игра для обучения чтению,
-                        которая будет интересна как родителям, так и педагогам дошкольного образования.
-                        Она поможет детям 4–7 лет под руководством взрослого легко освоить чтение в игровой форме.
-                    </p>
-                    <p>
-                        Игра построена по принципу <span class="fw-bold">«от простого к сложному»</span>: от букв и
-                        слогов → к словам → к предложениям.
-                    </p>
-                    <p>Идеально подходит как для игры в паре «взрослый — ребёнок», так и для занятий с небольшой
-                        группой детей.
-                    </p>
-                    <p><span class="fw-bold">В наборе:</span></p>
-                    <ul class="game-list">
-                        <li>карточки с буквами и слогами</li>
-                        <li>картинки для «ребусов»</li>
-                        <li>схемы слов и предложений</li>
-                    </ul>
-                    <p>
-                        Развивает фонематический слух, звуко-буквенный анализ и синтез, внимание, память и речь.
-                    </p>
-                    <p><span class="fw-bold">Играй. Читай. Развивайся!</span></p>
+    <div class="container">
+        <h2 class="game-title title-decorative">
+            Развивающая игра
+        </h2>
+        <div class="reading-game-wrapper">
+            <div class="reading-game-content">
+                <p><?php the_field('game_description_1'); ?></p>
+                <p><?php the_field('game_description_2'); ?></p>
+                <p><?php the_field('game_description_3'); ?></p>
 
-                    <div class="btn-wrapper">
-                        <a href="https://wa.me/79111988524?text=Здравствуйте,%20хочу%20приобрести%20игру"
-                            target="_blank" rel="noopener noreferrer" class="btn btn-game">
+                <p><span class="fw-bold">В наборе:</span></p>
+                <p><?php the_field('game_set_description'); ?></p>
+
+                <?php
+                $list_raw = get_field('game_list');
+                if ($list_raw):
+                    $list_items = explode("\n", $list_raw);
+                    echo '<ul class="game-list">';
+                    foreach ($list_items as $item) {
+                        echo '<li>' . esc_html(trim($item)) . '</li>';
+                    }
+                    echo '</ul>';
+                endif;
+                ?>
+
+                <p><?php the_field('game_offer_text'); ?></p>
+
+                <div class="btn-wrapper">
+                    <?php if (get_field('game_button_url')): ?>
+                        <a href="<?php echo esc_url(get_field('game_button_url')); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-game">
                             Приобрести игру
                         </a>
-                    </div>
+                    <?php endif; ?>
                 </div>
-                <div class="reading-game-visual">
-                    <div class="dino-container">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-animation.png" alt="Анимация динозавра"
-                            class="dino-animation" />
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/game-1.webp" alt="Фото игры" class="game-photo1" />
-                    </div>
+            </div>
+
+            <div class="reading-game-visual">
+                <div class="dino-container">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-animation.png" alt="Анимация динозавра" class="dino-animation" />
+                    
+                    <?php $image = get_field('game_image'); ?>
+                    <?php if ($image): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="game-photo1" />
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="form-section section-common">
         <div class="container">
