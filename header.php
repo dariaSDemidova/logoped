@@ -15,14 +15,23 @@
     <header id="header" class="header">
         <div class="header__bar bg-green">
             <div class="header__wrapper container">
-                <a href="/" class="header__logo"><img src="<?php bloginfo('template_url'); ?>/assets/logo/logo.svg" alt="Logo" /></a>
+                <?php the_custom_logo(); ?>
                 <div class="header__icons">
-                    <a href="https://wa.me/79111988524" target="_blank" rel="noopener noreferrer"><img
+                    <?php 
+                        $phone = get_field('whatsapp_phone'); 
+                        $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
+                        $email = get_field('contact_email');
+                    ?>
+                    <?php if ( $clean_phone ): ?>
+                    <a href="https://wa.me/<?php echo $clean_phone; ?>" target="_blank" rel="noopener noreferrer"><img
                             src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
-                    <a href="mailto:mitornadya@yandex.ru" target="_blank" rel="noopener noreferrer"><img
+                    <?php if ( $email ): ?>
+                    <a href="mailto:<?php echo esc_attr($email); ?>" target="_blank" rel="noopener noreferrer"><img
                             src="<?php bloginfo('template_url'); ?>/assets/icons/email.svg" alt="Email" /></a>
-                    <a href="tel:+79111988524"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
-                            alt="Позвонить по номеру +7 (911) 198-85-24" /></a>
+                    <?php endif; ?>
+                    <a href="tel:<?php echo $clean_phone; ?>"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
+                            alt="Позвонить по номеру <?php echo esc_html($clean_phone); ?>" /></a>
+                    <?php endif; ?>
                 </div>
                 <button class="header__burger" aria-label="Меню" type="button">
                     <span></span>

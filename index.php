@@ -10,8 +10,14 @@ get_header();
                     <h1>Кабинет Логопедической помощи</h1>
                     <p>путь к красивой и правильной речи начинается здесь</p>
                 </div>
-                <a class="hero__button btn" href="https://wa.me/79111988524" target="_blank"
+                <?php 
+                    $phone = get_field('whatsapp_phone'); 
+                    $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
+                ?>
+                <?php if ( $clean_phone ): ?>
+                    <a class="hero__button btn" href="https://wa.me/<?php echo $clean_phone; ?>" target="_blank"
                     rel="noopener noreferrer">Записаться на консультацию</a>
+                <?php endif; ?>
             </div>
             <div class="hero__imgBlock">
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-banner.png" alt="Динозаврик">
@@ -300,7 +306,7 @@ get_header();
         </div>
     </section>
 
-    <section class="form-section section-common">
+    <section id="form" class="form-section section-common">
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-text">
