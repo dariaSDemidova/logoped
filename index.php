@@ -10,13 +10,13 @@ get_header();
                     <h1>Кабинет Логопедической помощи</h1>
                     <p>путь к красивой и правильной речи начинается здесь</p>
                 </div>
-                <?php 
-                    $phone = get_field('whatsapp_phone'); 
-                    $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
+                <?php
+                $phone = get_field('whatsapp_phone');
+                $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
                 ?>
-                <?php if ( $clean_phone ): ?>
+                <?php if ($clean_phone): ?>
                     <a class="hero__button btn" href="https://wa.me/<?php echo $clean_phone; ?>" target="_blank"
-                    rel="noopener noreferrer">Записаться на консультацию</a>
+                        rel="noopener noreferrer">Записаться на консультацию</a>
                 <?php endif; ?>
             </div>
             <div class="hero__imgBlock">
@@ -34,36 +34,36 @@ get_header();
                         <p class="about-paragraph">Рада приветствовать Вас! Меня зовут Надежда Юрьевна Митор, я
                             учитель-логопед.</p>
                         <h3 class="about-subtitle">Образование</h3>
-                        <?php 
+                        <?php
                         $articles = get_field('education_textarea');
-                        if( $articles ):
+                        if ($articles):
                             $lines = explode("\n", $articles);
-                            foreach($lines as $line): 
+                            foreach ($lines as $line):
                                 $line = trim($line);
-                                if($line): ?>
+                                if ($line): ?>
                                     <div class="about-item__wrapper">
                                         <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                                         <p class="about-item"><?php echo esc_html($line); ?></p>
                                     </div>
-                            <?php endif;
+                        <?php endif;
                             endforeach;
                         endif;
                         ?>
                     </div>
                     <div class="about-text text-2">
                         <h3 class="about-subtitle">Курсы усовершенствования</h3>
-                        <?php 
+                        <?php
                         $articles = get_field('courses_textarea');
-                        if( $articles ):
+                        if ($articles):
                             $lines = explode("\n", $articles);
-                            foreach($lines as $line): 
+                            foreach ($lines as $line):
                                 $line = trim($line);
-                                if($line): ?>
+                                if ($line): ?>
                                     <div class="about-item__wrapper">
                                         <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                                         <p class="about-item"><?php echo esc_html($line); ?></p>
                                     </div>
-                            <?php endif;
+                        <?php endif;
                             endforeach;
                         endif;
                         ?>
@@ -71,18 +71,18 @@ get_header();
                     <div class="about-text text-3">
                         <h3 class="about-subtitle">Автор статей</h3>
 
-                        <?php 
+                        <?php
                         $articles = get_field('author_articles_textarea');
-                        if( $articles ):
+                        if ($articles):
                             $lines = explode("\n", $articles);
-                            foreach($lines as $line): 
+                            foreach ($lines as $line):
                                 $line = trim($line);
-                                if($line): ?>
+                                if ($line): ?>
                                     <div class="about-item__wrapper">
                                         <img class="about-tick" src="<?php bloginfo('template_url'); ?>/assets/icons/tick-icon.svg" alt="Галочка">
                                         <p class="about-item"><?php echo esc_html($line); ?></p>
                                     </div>
-                            <?php endif;
+                        <?php endif;
                             endforeach;
                         endif;
                         ?>
@@ -90,25 +90,26 @@ get_header();
                 </div>
                 <div class="about-images">
                     <div class="about-image image-1">
-                        <?php 
-                        $img1 = get_field('about-image1'); 
-                        if( $img1 ): ?>
+                        <?php
+                        $img1 = get_field('about-image1');
+                        if ($img1): ?>
                             <img src="<?php echo esc_url($img1); ?>" alt="Фото логопеда">
                         <?php endif; ?>
                     </div>
                     <div class="about-image image-2">
-                        <?php 
-                        $img2 = get_field('about-image2'); 
-                        if( $img2 ): ?>
+                        <?php
+                        $img2 = get_field('about-image2');
+                        if ($img2): ?>
                             <img src="<?php echo esc_url($img2); ?>" alt="Фото логопеда">
                         <?php endif; ?>
                     </div>
                     <div class="about-image image-3">
-                        <?php 
-                        $img3 = get_field('about-image3'); 
-                        if( $img3 ): ?>
+                        <?php
+                        $img3 = get_field('about-image3');
+                        if ($img3): ?>
                             <img src="<?php echo esc_url($img3); ?>" alt="Фото логопеда">
                         <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,23 +135,36 @@ get_header();
             <div class="container">
                 <h2 class="services__title title-decorative">Услуги и Прайс</h2>
                 <div class="services-block__top text-black text-center">
-                    <div class="services-block__card bg-pink rounded-20">Консультации для родителей</div>
-                    <div class="services-block__card bg-pink rounded-20">Занятия по коррекции нарушений</div>
-                    <div class="services-block__card bg-pink rounded-20">Логопедическое обследование детей
-                        дошкольного и младшего школьного возраста</div>
+                    <?php
+                    $articles = get_field('services_top_textarea');
+                    if ($articles):
+                        $lines = explode("\n", $articles);
+                        foreach ($lines as $line):
+                            $line = trim($line);
+                            if ($line): ?>
+                                <div class="services-block__card bg-pink rounded-20"><?php echo esc_html($line); ?></div>
+                    <?php endif;
+                        endforeach;
+                    endif;
+                    ?>
                 </div>
                 <div class="services-block__arrows">
                     <img class="services-block__arrow" src="<?php bloginfo('template_url'); ?>/assets/icons/arrow-down.svg" alt="стрелка вниз">
                     <img class="services-block__arrow" src="<?php bloginfo('template_url'); ?>/assets/icons/arrow-down.svg" alt="стрелка вниз">
                 </div>
                 <div class="services-block__bottom text-black text-center">
-                    <div class="services-block__card bg-green-light rounded-20">устной речи при дислалии, дизартрии,
-                        общем
-                        недоразвитии речи, фонетико – фонематическом
-                        недоразвитии речи</div>
-                    <div class="services-block__card bg-green-light rounded-20">письменной речи при дисграфии,
-                        дислексии,
-                        дизорфографии</div>
+                    <?php
+                    $articles = get_field('services_bottom_textarea');
+                    if ($articles):
+                        $lines = explode("\n", $articles);
+                        foreach ($lines as $line):
+                            $line = trim($line);
+                            if ($line): ?>
+                                <div class="services-block__card bg-green-light rounded-20"><?php echo esc_html($line); ?></div>
+                    <?php endif;
+                        endforeach;
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
@@ -159,27 +173,28 @@ get_header();
                 <div class="descr__img-wrapper">
                     <img class="descr__img" src="<?php bloginfo('template_url'); ?>/assets/images/dino.png" alt="динозавр">
                     <div class="descr__img-text bg-white text-center">
-                        Что ждёт Вашего ребёнка на занятии?
+                        <?php echo esc_html(get_field('descr_title')); ?>
                     </div>
-
                 </div>
                 <div class="descr__card bg-violet rounded-20">
                     <ul class="text-black">
-                        <li>Коррекция звукопроизношения</li>
-                        <li>Коррекция и развитие лексико-грамматического строя речи</li>
-                        <li>Развитие связной речи</li>
-                        <li>Развитие навыков языкового анализа и синтеза</li>
-                        <li>Развитие фонематических процессов</li>
-                        <li>Обучение грамоте детей дошкольного возраста (чтение и письмо)</li>
-                        <li>Профилактика нарушений чтения и письма у дошкольников (формирование функционального
-                            базиса письма и чтения)</li>
-                        <li>Подготовка к школе</li>
-                        <li>Коррекция нарушения чтения и письма у школьников (дислексия, дисграфия, дизорфография)
-                        </li>
+                        <?php
+                        $articles = get_field('descr_list_textarea');
+                        if ($articles):
+                            $lines = explode("\n", $articles);
+                            foreach ($lines as $line):
+                                $line = trim($line);
+                                if ($line): ?>
+                                    <li><?php echo esc_html($line); ?></li>
+                        <?php endif;
+                            endforeach;
+                        endif;
+                        ?>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="price section-special">
             <div class="container text-uppercase">
                 <h2 class="price__title text-center">Прайс</h2>
@@ -189,41 +204,29 @@ get_header();
                         <p class="text-end">Время</p>
                         <p class="text-end">Стоимость</p>
                     </div>
-                    <div class="price__item">
-                        <p class="first-p">Диагностика нарушений устной речи</p>
-                        <p class="text-end">30 минут</p>
-                        <p class="text-end">1200₽</p>
-                    </div>
-                    <div class="price__item">
-                        <p class="first-p">Диагностика нарушений устной/письменной речи</p>
-                        <p class="text-end">45 минут</p>
-                        <p class="text-end">1400₽</p>
-                    </div>
-                    <div class="price__item">
-                        <p class="first-p">Диагностика нарушений устной/письменной речи</p>
-                        <p class="text-end">60 минут</p>
-                        <p class="text-end">1650₽</p>
-                    </div>
-                    <div class="price__item">
-                        <p class="first-p">Индивидуальное занятие</p>
-                        <p class="text-end">30 минут</p>
-                        <p class="text-end">1200₽</p>
-                    </div>
-                    <div class="price__item">
-                        <p class="first-p">Индивидуальное занятие</p>
-                        <p class="text-end">45 минут</p>
-                        <p class="text-end">1400₽</p>
-                    </div>
-                    <div class="price__item">
-                        <p class="first-p">Индивидуальное занятие</p>
-                        <p class="text-end">60 минут</p>
-                        <p class="text-end">1650₽</p>
-                    </div>
+
+                    <?php
+                    $price_list = get_field('price_textarea');
+                    if ($price_list):
+                        $lines = explode("\n", $price_list);
+                        foreach ($lines as $line):
+                            $parts = array_map('trim', explode('|', $line));
+                            if (count($parts) === 3): ?>
+                                <div class="price__item">
+                                    <p class="first-p"><?php echo esc_html($parts[0]); ?></p>
+                                    <p class="text-end"><?php echo esc_html($parts[1]); ?></p>
+                                    <p class="text-end"><?php echo esc_html($parts[2]); ?></p>
+                                </div>
+                    <?php endif;
+                        endforeach;
+                    endif;
+                    ?>
+
                 </div>
             </div>
         </div>
-
     </section>
+
     <section id="reviews" class="reviews section-common">
         <div class="container">
             <h2 class="reviews-title title-decorative">Отзывы</h2>
@@ -247,7 +250,8 @@ get_header();
                             </div>
                         <?php endwhile; ?>
                     </div>
-                <?php endif; wp_reset_postdata(); ?>
+                <?php endif;
+                wp_reset_postdata(); ?>
 
                 <div class="my-button-prev">
                     <img src="<?php bloginfo('template_url'); ?>/assets/icons/left-arrow.svg" alt="Назад">
@@ -391,32 +395,32 @@ get_header();
             <div class="contacts__content">
                 <div class="contacts__text text-uppercase text-black">
                     <p class="contacts__label">наш Адрес:</p>
-                        <?php 
-                            $address = get_field('contact_address'); 
-                            $map_iframe = get_field('contact_map'); 
-                            $map_url = '';
-                            if ( $map_iframe && preg_match('/src="([^"]+)"/', $map_iframe, $matches)) {
-                            $map_url = $matches[1];
-                            }
-                        ?>
-                        <?php if( $address && $map_url ): ?>
+                    <?php
+                    $address = get_field('contact_address');
+                    $map_iframe = get_field('contact_map');
+                    $map_url = '';
+                    if ($map_iframe && preg_match('/src="([^"]+)"/', $map_iframe, $matches)) {
+                        $map_url = $matches[1];
+                    }
+                    ?>
+                    <?php if ($address && $map_url): ?>
                         <a class="contacts__link text-decoration-none"
-                        href="<?php echo esc_url( $map_url ); ?>"
-                        target="_blank" rel="noopener noreferrer">
-                        <?php echo esc_html( $address ); ?>
+                            href="<?php echo esc_url($map_url); ?>"
+                            target="_blank" rel="noopener noreferrer">
+                            <?php echo esc_html($address); ?>
                         </a>
-                        <?php endif; ?>
+                    <?php endif; ?>
                     <p class="contacts__label">телефон:</p>
-                        <?php if( $phone = get_field('contact_phone') ): ?>
+                    <?php if ($phone = get_field('contact_phone')): ?>
                         <a class="contacts__link text-decoration-none"
-                        href="tel:<?php echo preg_replace('/\D+/', '', $phone); ?>">
-                        <?php echo esc_html( $phone ); ?>
+                            href="tel:<?php echo preg_replace('/\D+/', '', $phone); ?>">
+                            <?php echo esc_html($phone); ?>
                         </a>
-                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
                 <div class="contacts__map">
-                    <?php if( $map_iframe ): ?>
-                    <?php echo $map_iframe; ?>
+                    <?php if ($map_iframe): ?>
+                        <?php echo $map_iframe; ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -427,4 +431,3 @@ get_header();
 <?php
 get_footer();
 ?>
-
