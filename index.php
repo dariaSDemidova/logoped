@@ -274,7 +274,6 @@ get_header();
                 <p><?php the_field('game_description_3'); ?></p>
 
                 <p><span class="fw-bold">В наборе:</span></p>
-                <p><?php the_field('game_set_description'); ?></p>
 
                 <?php
                 $list_raw = get_field('game_list');
@@ -288,7 +287,8 @@ get_header();
                 endif;
                 ?>
 
-                <p><?php the_field('game_offer_text'); ?></p>
+                <p><?php the_field('game_description_4'); ?></p>
+                <p><span class="fw-bold"><?php the_field('game_footer'); ?></span></p>
 
                 <div class="btn-wrapper">
                     <?php if (get_field('game_button_url')): ?>
@@ -311,7 +311,7 @@ get_header();
             </div>
         </div>
     </div>
-</section>
+    </section>
 
     <section id="form" class="form-section section-common">
         <div class="container">
