@@ -263,54 +263,54 @@ get_header();
         </div>
     </section>
     <section id="game" class="reading-game-section section-common">
-    <div class="container">
-        <h2 class="game-title title-decorative">
-            Развивающая игра
-        </h2>
-        <div class="reading-game-wrapper">
-            <div class="reading-game-content">
-                <p><?php the_field('game_description_1'); ?></p>
-                <p><?php the_field('game_description_2'); ?></p>
-                <p><?php the_field('game_description_3'); ?></p>
+        <div class="container">
+            <h2 class="game-title title-decorative">
+                Развивающая игра
+            </h2>
+            <div class="reading-game-wrapper">
+                <div class="reading-game-content">
+                    <p><?php the_field('game_description_1'); ?></p>
+                    <p><?php the_field('game_description_2'); ?></p>
+                    <p><?php the_field('game_description_3'); ?></p>
 
-                <p><span class="fw-bold">В наборе:</span></p>
+                    <p><span class="fw-bold">В наборе:</span></p>
 
-                <?php
-                $list_raw = get_field('game_list');
-                if ($list_raw):
-                    $list_items = explode("\n", $list_raw);
-                    echo '<ul class="game-list">';
-                    foreach ($list_items as $item) {
-                        echo '<li>' . esc_html(trim($item)) . '</li>';
-                    }
-                    echo '</ul>';
-                endif;
-                ?>
+                    <?php
+                    $list_raw = get_field('game_list');
+                    if ($list_raw):
+                        $list_items = explode("\n", $list_raw);
+                        echo '<ul class="game-list">';
+                        foreach ($list_items as $item) {
+                            echo '<li>' . esc_html(trim($item)) . '</li>';
+                        }
+                        echo '</ul>';
+                    endif;
+                    ?>
 
-                <p><?php the_field('game_description_4'); ?></p>
-                <p><span class="fw-bold"><?php the_field('game_footer'); ?></span></p>
+                    <p><?php the_field('game_description_4'); ?></p>
+                    <p><span class="fw-bold"><?php the_field('game_footer'); ?></span></p>
 
-                <div class="btn-wrapper">
-                    <?php if (get_field('game_button_url')): ?>
-                        <a href="<?php echo esc_url(get_field('game_button_url')); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-game">
-                            Приобрести игру
-                        </a>
-                    <?php endif; ?>
+                    <div class="btn-wrapper">
+                        <?php if (get_field('game_button_url')): ?>
+                            <a href="<?php echo esc_url(get_field('game_button_url')); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-game">
+                                Приобрести игру
+                            </a>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            </div>
 
-            <div class="reading-game-visual">
-                <div class="dino-container">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-animation.png" alt="Анимация динозавра" class="dino-animation" />
-                    
-                    <?php $image = get_field('game_image'); ?>
-                    <?php if ($image): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="game-photo1" />
-                    <?php endif; ?>
+                <div class="reading-game-visual">
+                    <div class="dino-container">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/images/dino-animation.png" alt="Анимация динозавра" class="dino-animation" />
+
+                        <?php $image = get_field('game_image'); ?>
+                        <?php if ($image): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="game-photo1" />
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
     <section id="form" class="form-section section-common">
@@ -322,7 +322,7 @@ get_header();
                         Оставьте заявку на
                         диагностику к профессионалу своего дела.</p>
                 </div>
-                <?php echo do_shortcode('[contact-form-7 id="a252526" title="Контактная форма"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="809b907" title="Форма обратной связи"]'); ?>
                 <div class="modal" id="privacy-modal">
                     <div class="modal-content">
                         <button class="close-modal">&times;</button>

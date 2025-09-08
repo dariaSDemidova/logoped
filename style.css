@@ -744,7 +744,7 @@ iframe {
 
 .descr__img-text:after {
     content: "";
-    background: url(../assets/icons/triangle.svg) center / cover no-repeat;
+    background: url('./assets/icons/triangle.svg') center / cover no-repeat;
     position: absolute;
     left: 30px;
     bottom: 10px;
