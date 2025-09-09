@@ -4,7 +4,9 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logoped</title>
+    <title><?php bloginfo('name');
+            echo " | ";
+            bloginfo('description'); ?></title>
 
     <?php
     wp_head();
@@ -17,20 +19,20 @@
             <div class="header__wrapper container">
                 <?php the_custom_logo(); ?>
                 <div class="header__icons">
-                    <?php 
-                        $phone = get_field('whatsapp_phone'); 
-                        $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
-                        $email = get_field('contact_email');
+                    <?php
+                    $phone = get_field('whatsapp_phone');
+                    $clean_phone = $phone ? preg_replace('/\D+/', '', $phone) : '';
+                    $email = get_field('contact_email');
                     ?>
-                    <?php if ( $clean_phone ): ?>
-                    <a href="https://wa.me/<?php echo $clean_phone; ?>" target="_blank" rel="noopener noreferrer"><img
-                            src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
-                    <?php if ( $email ): ?>
-                    <a href="mailto:<?php echo esc_attr($email); ?>" target="_blank" rel="noopener noreferrer"><img
-                            src="<?php bloginfo('template_url'); ?>/assets/icons/email.svg" alt="Email" /></a>
-                    <?php endif; ?>
-                    <a href="tel:<?php echo $clean_phone; ?>"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
-                            alt="Позвонить по номеру <?php echo esc_html($clean_phone); ?>" /></a>
+                    <?php if ($clean_phone): ?>
+                        <a href="https://wa.me/<?php echo $clean_phone; ?>" target="_blank" rel="noopener noreferrer"><img
+                                src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                        <?php if ($email): ?>
+                            <a href="mailto:<?php echo esc_attr($email); ?>" target="_blank" rel="noopener noreferrer"><img
+                                    src="<?php bloginfo('template_url'); ?>/assets/icons/email.svg" alt="Email" /></a>
+                        <?php endif; ?>
+                        <a href="tel:<?php echo $clean_phone; ?>"><img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg"
+                                alt="Позвонить по номеру <?php echo esc_html($clean_phone); ?>" /></a>
                     <?php endif; ?>
                 </div>
                 <button class="header__burger" aria-label="Меню" type="button">
