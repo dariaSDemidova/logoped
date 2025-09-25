@@ -1438,6 +1438,23 @@ iframe {
     min-width: 60px;
 }
 
+.error {
+    max-height: 100vh;
+}
+
+.error__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.error__image {
+    width: 500px;
+}
+
+
 @media(max-width: 1580px) {
 
     /* Header */
@@ -2062,5 +2079,9 @@ iframe {
 
     .form-text {
         margin-top: 25%;
+    }
+
+    .error__image {
+        width: 100%;
     }
 }
